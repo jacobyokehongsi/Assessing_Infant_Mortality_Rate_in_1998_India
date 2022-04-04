@@ -4,7 +4,7 @@ author:
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_the_Knowledge_of_AIDS_amongst_Women_in_1997_Vietnam"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "What does the average family look like in Canada? Using data from the 2017 Canadian General Social Survey (GSS) on Family, we look to paint a picture of Canadian families through the lens of family size and type, marriage and children, place of origin, income, religion and mental health. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. First sentence. Second sentence. Third sentence. Fourth sentence. \\par \\textbf{Keywords:} a, b"
+abstract: "How does the knowledge of AIDS amongst Vietnamese women differ? Utilizing the data from the 1997 Vietnam Demographic and Health Survey (DHS), we look to depict the demographics of AIDS knowledge of Vietnamese women whilst varying characteristics such as their age, marital status, residence region and education. third sentence: specify the headline result; and a fourth sentence about implications. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. \\par \\textbf{Keywords:} AIDS, vietnamese women, source, age group, regions, levels of education"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -19,27 +19,28 @@ library(tidyverse)
 
 # Introduction
 
-Canada’s General Social Survey (GSS) program is a series of independent, annual, cross sectional surveys on a variety of topics, such as families, caregiving and social identity, with each survey covering one topic in depth. As well as collecting information on the given topic, each survey also collects comprehensive socio-demographic data, recording respondents age, sex, education, religion, etc. Established in 1985, the GSS program was founded with 2 primary objectives:
-To gather data on social trends as they evolve over time, in order to monitor changes in the living conditions and lifestyle of Canadians, and to provide information on specific social policy issues of current or emerging interest. In these regards, the GSS program has been largely successful, with GSS data often serving as evidence behind key government programs designed to improve the well-being of Canadians. Additionally, the GSS data has also informed research about the social lives of Canadians, and continues to serve as a valuable training tool for quantitative and statistical methods in post-secondary institutions across the country (believe it or not). For these reasons, the GSS program serves an important and foundational role within Canada's national statistical system. 
+The Demographic and Health Surveys (DHS) is a nationwide household survey that provides data for a myriad of evaluation indicators with respect to health, nutrition and population. A few examples of topics include education, HIV/AIDS knowledge and tobacco use. In addition to the topics mentioned, each survey also collects comprehensive socio-demographic data including the respondents' age, marital status, residential area, etc. 
 
-The General Social Survey on Family monitors trends and changes in Canadian families. Family is the single most important influence in a child's life; our family shapes our growth, influencing every aspect of our lives. Indeed, a strong, supportive family is the best and most foundational support a person can have. The GSS on Family aims to provide the government with an accurate picture of the diversity, demographics and trends of Canadian families. The data collected will help guide lawmakers in designing social programs and policies that will best serve the needs of millions of Canadian families. Hence, the GSS on Family is foundational in helping Canadian families, and therefore plays a key role in helping new Canadians have a healthy and functional support system. In this sense, the GSS is helping usher new generations of Canadians into as good of a world as possible, and thus plays a critical role in the continued prosperity of Canada.
+The DHS program was established in 1984 and has provided technical assistance to over 300 demographic and health surveys in more than 90 countries with its main objective to enhance and develop data collection and utilization by host countries for monitoring and evaluating demographic indicators in order to devise high quality policy development decisions.
 
-In this paper, we view a snapshot of what Canadian families look like using data from the 2017 General Social Survey on Family. Specifically, we look to address the following research questions:
+In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system. (https://en.wikipedia.org/wiki/Demographic_and_Health_Surveys)
 
-- What is the mental health of Canadians like, and what factors may be related to this?
-- What are the most common family sizes and types (e.g. married couple, single-parent, etc.)?
-- Do most Canadians get married and how many children do they have?
-- Are Canadian households mainly low-income, middle-income or high-income?
-- Which provinces have the most immigrant families?
-- Is religion important in Canadian families?
+The Demographic and Health Survey on the knowledge of AIDS in Vietnam assesses the knowledge and attitudes of Vietnamese women regarding the prevention of infection with the AIDS virus. The AIDS virus, also known as Acquired immunodeficiency syndrome, is a chronic, potentially life endangering condition caused by the HIV (human immunodeficiency virus) which is a sexually transmitted infection. The HIV would damage the body's immune system to fight off infections and diseases. Since there is no present cure for HIV, prevention is crucial to ensure that the population does not contract AIDS/HIV. (https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524)
 
+The DHS on AIDS knowledge aims to provide the National Committee for AIDS Prevention, which is the organization responsible for the dissemination of AIDS information in Vietnam, information that includes modes of AIDS transmission and potential prevention strategies. With the available data, it would assist the organization in designing social policies that will best inform the Vietnamese population of AIDS prevention. Thus, the DHS is one of the key aspects of the foundation in informing Vietnamese women about the preventive measures that could be taken against AIDS.
 
+In this paper, we will explore the percentage of ever-married women by knowledge of AIDS and its source, according to their background characteristics during 1997 Vietnam. Specifically, I will address the following research questions:
+
+- At what age group are Vietnamese women least informed about AIDS?
+- Are there specific regions in Vietnam where the knowledge is lacking and why this is the case?
+- What is the most prevalent source of AIDS knowledge in Vietnam?
+- Does education affect the knowledge of AIDS and if so, do different levels of education affect the knowledge differently?
 
 # Data
 
+# Model
 
 # Results
-
 
 # Discussion
 
