@@ -1,12 +1,10 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Assessing the knowledge of AIDS amongst Women in 1997 Vietnam"
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
+  - Jacob Yoke Hong Si
+thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_the_Knowledge_of_AIDS_amongst_Women_in_1997_Vietnam"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "What does the average family look like in Canada? Using data from the 2017 Canadian General Social Survey (GSS) on Family, we look to paint a picture of Canadian families through the lens of family size and type, marriage and children, place of origin, income, religion and mental health. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. First sentence. Second sentence. Third sentence. Fourth sentence. \\par \\textbf{Keywords:} a, b"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -17,63 +15,31 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(palmerpenguins)
 ```
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
+Canada’s General Social Survey (GSS) program is a series of independent, annual, cross sectional surveys on a variety of topics, such as families, caregiving and social identity, with each survey covering one topic in depth. As well as collecting information on the given topic, each survey also collects comprehensive socio-demographic data, recording respondents age, sex, education, religion, etc. Established in 1985, the GSS program was founded with 2 primary objectives:
+To gather data on social trends as they evolve over time, in order to monitor changes in the living conditions and lifestyle of Canadians, and to provide information on specific social policy issues of current or emerging interest. In these regards, the GSS program has been largely successful, with GSS data often serving as evidence behind key government programs designed to improve the well-being of Canadians. Additionally, the GSS data has also informed research about the social lives of Canadians, and continues to serve as a valuable training tool for quantitative and statistical methods in post-secondary institutions across the country (believe it or not). For these reasons, the GSS program serves an important and foundational role within Canada's national statistical system. 
+
+The General Social Survey on Family monitors trends and changes in Canadian families. Family is the single most important influence in a child's life; our family shapes our growth, influencing every aspect of our lives. Indeed, a strong, supportive family is the best and most foundational support a person can have. The GSS on Family aims to provide the government with an accurate picture of the diversity, demographics and trends of Canadian families. The data collected will help guide lawmakers in designing social programs and policies that will best serve the needs of millions of Canadian families. Hence, the GSS on Family is foundational in helping Canadian families, and therefore plays a key role in helping new Canadians have a healthy and functional support system. In this sense, the GSS is helping usher new generations of Canadians into as good of a world as possible, and thus plays a critical role in the continued prosperity of Canada.
+
+In this paper, we view a snapshot of what Canadian families look like using data from the 2017 General Social Survey on Family. Specifically, we look to address the following research questions:
+
+- What is the mental health of Canadians like, and what factors may be related to this?
+- What are the most common family sizes and types (e.g. married couple, single-parent, etc.)?
+- Do most Canadians get married and how many children do they have?
+- Are Canadian households mainly low-income, middle-income or high-income?
+- Which provinces have the most immigrant families?
+- Is religion important in Canadian families?
 
 
 
 # Data
 
-Our data is of penguins (Figure \@ref(fig:bills)).
-
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
-
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
-
-# This needs to be about the random data tha tI sasmpled?
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk way more about it. 
-
-
-
-# Model
-
-\begin{equation}
-Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
-\end{equation}
-
-Equation \@ref(eq:bayes) seems useful, eh?
-
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
 
 # Results
+
 
 # Discussion
 
@@ -87,17 +53,12 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
 
 \newpage
 
 \appendix
 
 # Appendix {-}
-
-
-# Additional details
-
 
 \newpage
 
