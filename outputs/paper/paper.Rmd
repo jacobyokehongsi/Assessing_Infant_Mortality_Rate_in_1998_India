@@ -4,7 +4,7 @@ author:
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_the_Knowledge_of_AIDS_amongst_Women_in_1997_Vietnam"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "How does the knowledge of AIDS amongst Vietnamese women differ? Utilizing the data from the 1997 Vietnam Demographic and Health Survey (DHS), we look to depict the demographics of AIDS knowledge of Vietnamese women whilst varying characteristics such as their age, marital status, residence region and education. third sentence: specify the headline result; and a fourth sentence about implications. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. \\par \\textbf{Keywords:} AIDS, vietnamese women, source, age group, regions, levels of education"
+abstract: "In what areas of women's and children's health and living conditions can be improved? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian Women and Children in different states of India. third sentence: specify the headline result; and a fourth sentence about implications. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. \\par \\textbf{Keywords:} AIDS, vietnamese women, source, age group, regions, levels of education"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -12,35 +12,377 @@ bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, out.width = "65%", out.height = "65%")
 
 library(tidyverse)
+library(knitr)
+library(DiagrammeR)
+
+# reading in data
+data <- read_csv(here::here("inputs/data/cleaned_data.csv")) %>% 
+  slice(-1)
 ```
 
 # Introduction
 
-The Demographic and Health Surveys (DHS) is a nationwide household survey that provides data for a myriad of evaluation indicators with respect to health, nutrition and population. A few examples of topics include education, HIV/AIDS knowledge and tobacco use. In addition to the topics mentioned, each survey also collects comprehensive socio-demographic data including the respondents' age, marital status, residential area, etc. 
+The Demographic and Health Surveys (DHS) is a nationwide household survey that provides data for a myriad of evaluation indicators with respect to health, nutrition and population. A few examples of topics include education, mortality rate and health conditions. In addition to the topics mentioned, each survey also collects comprehensive socio-demographic data including the respondents' age, marital status, residential area, etc. 
 
 The DHS program was established in 1984 and has provided technical assistance to over 300 demographic and health surveys in more than 90 countries with its main objective to enhance and develop data collection and utilization by host countries for monitoring and evaluating demographic indicators in order to devise high quality policy development decisions.
 
 In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system. (https://en.wikipedia.org/wiki/Demographic_and_Health_Surveys)
 
-The Demographic and Health Survey on the knowledge of AIDS in Vietnam assesses the knowledge and attitudes of Vietnamese women regarding the prevention of infection with the AIDS virus. The AIDS virus, also known as Acquired immunodeficiency syndrome, is a chronic, potentially life endangering condition caused by the HIV (human immunodeficiency virus) which is a sexually transmitted infection. The HIV would damage the body's immune system to fight off infections and diseases. Since there is no present cure for HIV, prevention is crucial to ensure that the population does not contract AIDS/HIV. (https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524)
+The National Family Health Survey (DHS program in India) on the state findings in India assesses key demographics of women and children including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their children. 
 
-The DHS on AIDS knowledge aims to provide the National Committee for AIDS Prevention, which is the organization responsible for the dissemination of AIDS information in Vietnam, information that includes modes of AIDS transmission and potential prevention strategies. With the available data, it would assist the organization in designing social policies that will best inform the Vietnamese population of AIDS prevention. Thus, the DHS is one of the key aspects of the foundation in informing Vietnamese women about the preventive measures that could be taken against AIDS.
+The DHS on women and children's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and children population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
 
-In this paper, we will explore the percentage of ever-married women by knowledge of AIDS and its source, according to their background characteristics during 1997 Vietnam. Specifically, I will address the following research questions:
+In this paper, we will explore the background and characteristics of Indian women and children using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
 
-- At what age group are Vietnamese women least informed about AIDS?
-- Are there specific regions in Vietnam where the knowledge is lacking and why this is the case?
-- What is the most prevalent source of AIDS knowledge in Vietnam?
-- Does education affect the knowledge of AIDS and if so, do different levels of education affect the knowledge differently?
+- 
+
+The rest of the paper explores the following: Section 2 explores the origin of the data, methods used to obtain the data and its strengths and weaknesses. Section 3 
+needs to telegraph the rest of the paper: "Section 2..., Section 3...."
 
 # Data
+## Data Source and Methodology
+
+The data was obtained from India’s second National Family Health Survey (NFHS-2) on women's and children's health. The survey was conducted in 1998-1999 using the NFHS questionnaire where households would be interviewed. The questionnaire was devised during workshops held in Mumbai where experts in population and health fields would partake in creating the questions. The target population was a sample of more than 90,000 ever-married women age 15–49 as well as children born in the three years preceding the survey. The list of villages is used as a sampling frame and first stratified through several variables. Next, the participants were selected using systematic sampling with equal probability from a household list in each village area. The overall individual response rate was 96% with a total of 89,199 eligible women that are part of the 91,196 interviewed households. 
+
+The following is a brief outline of the questionnaire content on the 1998 India NFHS:
+
+- Background characteristics
+- Reproductive behavior and intentions
+- Quality of care
+- Knowledge and use of contraception
+- Sources of family planning
+- Antenatal, delivery, and postpartum care
+- Breastfeeding and health
+- Reproductive health
+- Status of Women
+- Knowledge of AIDS
+
+## Survey Frame and Sampling Method
+As mentioned in the previous section, participants of this survey were chosen via stratified sampling and systematic sampling. The survey frame that was created is as follows. The list of villages were first stratified by geographic location, then continuous regions and lastly further stratified using selected variables such as village size, female literacy and so on. Each state in India was stratified individually using these variables with a limit of 6 stratas for small states, 12 stratas for medium size states and 15 stratas for large states. From the list of stratified villages, they are then sampled systematically with probability proportional to the 1991 Census population of the village. The villages that have fewer than five households are not included in the sampling frame. Lastly, the individuals to be interviewed were selected with equal probability from the household list in each village area using systematic sampling.
+
+## Key features
+The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity and toilets, infant mortality rate, mothers receiving antenatal care, vaccination status of children, anaemia statuses (mothers and children) and weight statuses (mothers and children).
+
+We used R (R Core Team 2020) and R package tidyverse (Wickham et al. 2019) to preprocess and analyze the data. When preprocessing the data, we also use R package pointblank (cite) to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1, which was made using R package knitr (cite).
+
+
+```{r datafeatures, echo=FALSE, message=FALSE}
+data %>%
+  select(state, att_school, electricity, infant_mortality) %>%
+  slice(1:10) %>%
+  kable(
+    caption = "Several Key Features Analyzed in the Paper",
+    col.names = c("State", "Females Age 6-14 Attending School", "Households with Electricity", "Infant Mortality Rate"),
+    digits = 1,
+    booktabs = TRUE, 
+    linesep = ""
+  )
+```
+
+```{r datafeatures2, echo=FALSE, message=FALSE}
+data %>%
+  select(state, underweight, women_anaemia) %>%
+  slice(1:10) %>%
+  kable(
+    caption = "Several Key Features Analyzed in the Paper Continued.",
+    col.names = c("State", "Children under Age Three that are Underweight", "Women Age 15-49 with any Anaemia"),
+    digits = 1,
+    booktabs = TRUE, 
+    linesep = ""
+  )
+```
+
+## Strengths and Weaknesses
+### Strengths
+The primary strengths of this survey is the myriad of variables describing participants and households, as well as the large sample size where more than 99 percent of India's female population is surveyed. Additionally, all Indian states except for one is surveyed, covering the majority of India. The field data collected by interviewing teams were inputted into microcomputers to produce field-check tables, ensuring that errors are prevented when eliciting information and filling out questionnaires. The large amount of variables allows for thorough data exploration of the relationships between them while the ample amount of data allows concrete conclusions to be drawn. Furthermore, the sampling methodologies is explained in high detail as well as a comprehensive fact sheet put together to display key data from the survey.
+
+### Weaknesses
+One of the drawbacks of the survey is that survey findings were obtained in all states but one, that is Tripura, due to the delay in fieldwork based on a local problem. Additionally, data is unable to be obtained from areas with union territories. Nonsampling errors are also present where surveyors were unable to locate and interview the correct household and the misunderstanding of the questionnaire by the interviewer or respondent. In addition, the collection of anaemia data was hindered since some female participants refused to partake in the anaemia testing and/or have their children tested as well. These aforementioned weaknesses results in missing data thus, the inference we make could be less diverse.
+
+
+details of the methodology used by the DHS you used, and its key features, strengths, and weaknesses.
 
 # Model
 
+
 # Results
+The figures were made using R (R Core Team 2020), R package tidyverse (Wickham et al. 2019) and Lucidchart (cite). The variables explored provides numeric values that varies between the states of India.
+
+```{r, echo=FALSE, fig.cap="Supplementary Survey Questions", out.width = '100%'}
+knitr::include_graphics(here::here("inputs/data/sta304_diag.jpeg"))
+```
+
+## Household conditions that affect females attending school
+
+```{r attsch, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Distribution of the Percent of females age 6-14 attending school in various Indian States"}
+# Plot for Percent of females age 6-14 attending school
+data %>%
+  ggplot(aes(x = reorder(state, att_school), y = att_school, fill = population)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(x = "State",
+       y = "Percent of females age 6-14 attending school") + 
+  scale_fill_continuous(name = "Population in Millions", type = "viridis") +
+  coord_flip()
+```
+
+Figure \@ref(fig:attsch) depicts the distribution of females age 6-14 attending school (in percent) across the different states of India. Here, we observe that majority of females attending school, are from states including Kerala, Himachal Pradesh and Goa whereas majority of females not attending school are from Bihar, Rajasthan and Uttar Pradesh. In the states where the majority of females are not attending school, we can infer that these states tend to have a larger population, especially Uttar Pradesh.
+
+```{r elecsch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females age 6-14 attending school and Percent of households with electricity (in percent)"}
+data %>% 
+  ggplot(aes(x = electricity, y = att_school)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of households with electricity",
+       y = "Percent of females age 6-14 attending school") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:elecsch) depicts the relationship between households with electricity and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with electricity increases, the percent of females age 6-14 attending school increases. This implies that households that can afford electricity tend to be more well-off and are able to send their children to school.
+
+```{r watersch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = piped_pump_water, y = att_school)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of households with drinking water piped or from hand pump",
+       y = "Percent of females age 6-14 attending school") + 
+  geom_smooth(method='lm')
+```
+
+```{r waterpop, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = piped_pump_water, y = population)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of households with drinking water piped or from hand pump",
+       y = "Population in Millions (1 July, 2000)") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:watersch) depicts the relationship between households with drinking water piped or from hand pump and females age 6-14 attending school (in percent). Here, we observe that as the percent of households drinking water piped or from hand pump increases, the percent of females age 6-14 attending school decreases at a moderate level. If we were to also look at Figure \@ref(fig:waterpop), as the percent of households with drinking water piped or from hand pump increases, the population increases. Thus, this aligns with the fact that in Figure \@ref(fig:attsch), states with higher populations are also states where the majority of females are not attending school.
+
+```{r toiletsch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = no_toilet, y = att_school)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of households with no toilet/latrine facility",
+       y = "Percent of females age 6-14 attending school") + 
+  geom_smooth(method='lm')
+```
+
+Lastly, figure \@ref(fig:toiletsch) depicts the relationship between households with no toilet/latrine facility and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with no toilet/latrine facility increases, the percent of females age 6-14 attending school decreases This implies that households that have sanitation areas contributes to a better living environment leading to educated female individuals in the household.
+
+## Females attending school and Women involved in decisions regarding personal healthcare
+```{r schhealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = att_school, y = healthcare_decisions)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of females age 6-14 attending school",
+       y = "Percent of women involved in their own healthcare decisions") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:schhealth) depicts the relationship between females age 6-14 attending school and women involved in decisions about their own healthcare (in percent). Here, we observe that as the percent of females age 6-14 attending school increases, the percent of women involved in decisions about their own healthcare increases. This suggests that female individuals that are educated are more likely to take care of their own health and live a healthier lifestyle.
+
+
+## Women involved in decisions regarding personal healthcare and mothers receiving at least one antenatal check-up
+```{r decante, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = healthcare_decisions, y = antenatal)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Percent of women involved in their own healthcare decisions",
+       y = "Mothers receiving at least one antenatal check-up") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:decante) depicts the relationship between women involved in their own healthcare decisions and mothers receiving at least one antenatal check-up for births in the three years preceding the survey (in percent). Here, we observe that as the percent of women involved in own healthcare decisions increases, the percent of mothers receiving at least one antenatal check-up for births increases. This suggests that female individuals who are informed of their personal health care are also wary of having antenatal check-up conducted.
+
+## Mothers that receive antenatal check-up and the antenatal care they receive
+Here, we explore how mothers that have antenatal check-up affect the antenatal care they receive for births three years preceding the survey.
+
+### Antenatal Injections and Supplements
+
+```{r anteiron, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = antenatal, y = iron_folic)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Mothers receiving at least one antenatal check-up",
+       y = "Mothers receiving iron and folic acid tablets or syrup") + 
+  geom_smooth(method='lm')
+```
+
+```{r anteinject, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = antenatal, y = injections)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Mothers receiving at least one antenatal check-up",
+       y = "Mothers receiving two or more tetanus toxoid injections") + 
+  geom_smooth(method='lm')
+```
+
+Figures \@ref(fig:anteiron) and \@ref(fig:anteinject) depict the relationships between mothers receiving at least one antenatal check-up with mothers receiving iron and folic acid tablets or syrup as well as two or more tetanus toxoid injections (in percent) respectively. We observe that as the percent of mothers receiving at least one antenatal check-up increases, the percent of mothers receiving two or more tetanus toxoid injections as well as iron and folic acid tablets or syrup increases. This suggests that as mothers attend antenatal check-ups, doctors are likely to prescribe the mothers with tetanus toxoid injections as well as iron and folic acid supplements which boosts the health of the mother for a good birth delivery.
+
+### Birth Delivery
+```{r antemed, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = antenatal, y = deli_med_inst)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Mothers receiving at least one antenatal check-up",
+       y = "Deliveries in medical institutions") + 
+  geom_smooth(method='lm')
+```
+
+```{r antehealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = antenatal, y = deli_health_pro)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Mothers receiving at least one antenatal check-up",
+       y = "Deliveries assisted by a health professional") + 
+  geom_smooth(method='lm')
+```
+
+Figures \@ref(fig:antemed) and \@ref(fig:antehealth) depict the relationships between mothers receiving at least one antenatal check-up with deliveries in medical institutions as well as deliveries assisted by a health professional (in percent) respectively. We observe that as the percent of mothers receiving at least one antenatal check-up increases, the percent of deliveries in medical institutions as well as deliveries assisted by a health professional increases. This suggests that when mothers go for their antenatal check-up, they likely have to approach a medical institution and have their check-up conducted by a health professional.
+
+## Factors that affect Infant Mortality Rate
+
+In this subsection, we will explore the factors that will affect the infant mortality rate per 1,000 live births for the five years preceding the survey.
+
+```{r statemortal, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Distribution of Infant Mortality Rate in various Indian States"}
+data %>%
+  ggplot(aes(x = reorder(state, infant_mortality), y = infant_mortality, fill = state)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(x = "State",
+       y = "Infant Mortality Rate") +
+  theme(legend.position = "none") +
+  coord_flip()
+```
+
+Figure \@ref(fig:statemortal) depicts the distribution of infant mortality rate across the different states of India. Here, we observe that states with the highest infant mortality rates include Meghalaya, Uttar Pradesh and Madhya Pradesh whereas states with the lowest infant mortality rates include Kerala, Himachal Pradesh and Goa.
+
+### Health Profile and Delivery Methods of Mothers prior to giving birth
+Here, we explore how different health profile factors and delivery methods affect the infant mortality rate for births in the three years preceding the survey.
+
+```{r ironmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = iron_folic, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Mothers receiving iron and folic acid tablets or syrup",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+```{r injectmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = injections, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Mothers receiving two or more tetanus toxoid injections",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+Figures \@ref(fig:ironmortal) and \@ref(fig:injectmortal) depicts the relationship between mothers receiving iron and folic acid tablets or syrup, and two or more tetanus toxoid injections (in percent) with infant mortality rate respectively. Here, we observe that as the percent of mothers receiving iron and folic acid tablets or syrup and two or more tetanus toxoid injections increases, the infant mortality rate decreases. This suggests that mothers that pay more attention to their own health and maintain a healthy regimen will lead to a reduction in deaths of infants when they are born.
+
+```{r medmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = deli_med_inst, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Deliveries in medical institutions",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+```{r promortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = deli_health_pro, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Deliveries assisted by a health professional",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+Figures \@ref(fig:medmortal) and \@ref(fig:promortal) depicts the relationship between deliveries in medical institutions and deliveries assisted by a health professional (in percent) with the infant mortality rate respectively. Here, we observe that as the percent of deliveries in medical institutions and deliveries assisted by a health professional increases, the infant mortality rate decreases. This implies that mothers that receive proper care during birth deliveries will also have a smooth child birth.
+
+## Children that receive breastmilk and/or both breastmilk and solid food
+
+```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = breastfed, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Percent of children age 0-3 months exclusively breastfed",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+```{r breastfoodmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = child_milkfood, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Percent of children age 6-9 months receiving breast milk and solid/mushy food",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+Figures \@ref(fig:breastmortal) and \@ref(fig:breastfoodmortal) portrays the relationship between children age 0-3 months exclusively breastfed, and children age 6-9 months receiving breast milk and solid/mushy food (in percent) with the infant mortality rate respectively. Here, we observe that the percent of children age 0-3 months that are exclusively breastfed does not have a significant impact on infant mortality rate. On the other hand, as the percent of children age 6-9 months receiving breast milk and solid/mushy food increases, the infant mortality rate decreases. This indicates that regardless of breast milk or formula milk fed to children at age 0-3 months, infant mortality rate is not affected. However, as children grow to the age of 6-9 months, they should be provided solid/mushy food on top of breast milk to support their growth, reducing their mortality.
+
+## Relationship between a women's body mass index (BMI), child's weight and infant mortality rate
+
+```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = below_BMI, y = underweight)) +
+  geom_point() +
+  labs(x = "Percent of women with BMI below 18.5 kg/m",
+       y = "Percent of children under age three that are underweight") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:bmiunder) depicts the relationship between women with BMI below 18.5 kg/m and children under age three years that are underweight (in percent). Here, we observe that as the percent of women with BMI below 18.5 kg/m increases, the percent of children under age three years that are underweight increases. This implies that mothers that are skinny and malnutritioned would also lead to offsprings that are underweight.
+
+```{r undermortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = underweight, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Percent of children under age three years that are underweight",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:undermortal) depicts the relationship between children under age three years that are underweight (in percent) and infant mortality rate. Here, we observe that as the percent of children under age three that are underweight increases, the infant mortality rate increases. From this we can infer that children who are not underweight tends to be in good health which reduces infant mortality rate.
+
+## Relationship between women with anaemia, children with anaemia and infant mortality rate
+
+```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = women_anaemia, y = child_anaemia)) +
+  geom_point() +
+  labs(x = "Percent of women age 15–49 with any anaemia",
+       y = "Percent of children age 6–35 months with any anaemia") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:womenchildanaem) depicts the relationship between women age 15-49 with any anaemia and children age 6-35 months with any anaemia (in percent). Here, we observe that as the percent of women age 15-49 with any anaemia increases, the percent of children age 6-35 months with any anaemia increases. This is coherent with the fact that since anaemia such as hemolytic anaemia can be inherited, mothers could pass on the anaemia to their offspring.
+
+```{r childmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Graph of Illiteracy vs Immunization Rate"}
+data %>% 
+  ggplot(aes(x = child_anaemia, y = infant_mortality)) +
+  geom_point() +
+  labs(x = "Percent of children age 6–35 months with any anaemia",
+       y = "Infant Mortality Rate") + 
+  geom_smooth(method='lm')
+```
+
+Figure \@ref(fig:childmortal) depicts the children age 6–35 months with any anaemia (in percent) and infant mortality rate. Here, we observe that as the percent of children age 6–35 months with any anaemia increases, the infant mortality rate increases. From this we can infer that children who have the anaemia disease would have symptoms that lead to critical health conditions and death.
 
 # Discussion
 
@@ -60,6 +402,146 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 \appendix
 
 # Appendix {-}
+# Data Sheet
+
+1. *For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.*
+    - The dataset was created to enable analysis of policy makers and program administrators in India responsible for improving health and family welfare programs in the states.
+2. *Who created the dataset (for example, which team, research group) and on behalf of which entity (for example, company, institution, organization)?*
+    - The International Institute for Population Sciences (IIPS) was designated as the agency for creating the dataset on behalf of the Ministry of Health and Family Welfare, Government of India, New Delhi.
+3. *Who funded the creation of the dataset? If there is an associated grant, please provide the name of the grantor and the grant name and number.*
+    - It was funded by the Government of India.
+4. *Any other comments?*
+    - This second National Family Health Survey (NFHS-2) is created to further bolster the existing database from the first NFHS and further update the required health programs that should be implemented in the country.
+
+**Composition**
+
+1. *What do the instances that comprise the dataset represent (for example, documents, photos, people, countries)? Are there multiple types of instances (for example, movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.*
+	- The instances that comprise the dataset represent the states of India. This includes North, Central, East, Northeast, West and South states of India.
+2. *How many instances are there in total (of each type, if appropriate)?*
+	- North: 6
+	- Central: 2
+	- East: 3
+	- Northeast: 7
+	- West: 3
+	- South: 4
+	- Total: 25 + 1 (India) = 26
+3. *Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (for example, geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (for example, to cover a more diverse range of instances, because instances were withheld or unavailable).*
+	- The dataset contain all possible instances (states of India).
+4. *What data does each instance consist of? "Raw" data (for example, unprocessed text or images) or features? In either case, please provide a description.*
+	- Each instance consists of 1 categorical variable representing the state and 18 continuous variables representings variables such as school attendence rate, percent of households with electricity, infant mortality rate etc.
+5. *Is there a label or target associated with each instance? If so, please provide a description.*
+	- Theres is no target associated with each instance.
+6. *Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (for example, because it was unavailable). This does not include intentionally removed information, but might include, for example, redacted text.*
+	- Under the instance Goa and variable percent of children age 0-3 months exclusively breastfed, information is missing because the data collected is based on fewer than 25 unweighted cases.
+7. *Are relationships between individual instances made explicit (for example, users' movie ratings, social network links)? If so, please describe how these relationships are made explicit.*
+	- There are no relationships between individual instances.
+8. *Are there recommended data splits (for example, training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.*
+	- There are no recommended data splits
+9. *Are there any errors, sources of noise, or redundancies in the dataset? If so, please provide a description.*
+	- There are no errors, sources of noise, or redundancies in the dataset.
+10. *Is the dataset self-contained, or does it link to or otherwise rely on external resources (for example, websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (that is, including the external resources as they existed at the time the dataset was created); c) are there any restrictions (for example, licenses, fees) associated with any of the external resources that might apply to a dataset consumer? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.*
+	- The dataset is self-contained.
+11. *Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)? If so, please provide a description.*
+	- The dataset does not contain data that might be considered confidential.
+12. *Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.*
+	- The dataset does not contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety.
+13. *Does the dataset identify any sub-populations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.*
+	- The dataset identifies women and children below age three.
+14. *Is it possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset? If so, please describe how.*
+	- It is not possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset.
+15. *Does the dataset contain data that might be considered sensitive in any way (for example, data that reveals race or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.*
+	- The dataset does not contain data that might be considered sensitive in any way.
+16. *Any other comments?*
+	- N/A
+
+**Collection process**
+
+1. *How was the data associated with each instance acquired? Was the data directly observable (for example, raw text, movie ratings), reported by subjects (for example, survey responses), or indirectly inferred/derived from other data (for example, part-of-speech tags, model-based guesses for age or language)? If the data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.*
+	- The data associated with each instance is acquired through interviews conducted in 25 Indian states.
+2. *What mechanisms or procedures were used to collect the data (for example, hardware apparatuses or sensors, manual human curation, software programs, software APIs)? How were these mechanisms or procedures validated?*
+	- TBD
+3. *If the dataset is a sample from a larger set, what was the sampling strategy (for example, deterministic, probabilistic with specific sampling probabilities)?*
+	- TBD
+4. *Who was involved in the data collection process (for example, students, crowdworkers, contractors) and how were they compensated (for example, how much were crowdworkers paid)?*
+	- TBD
+5. *Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (for example, recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created.*
+	- TBD
+6. *Were any ethical review processes conducted (for example, by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.*
+	- TBD
+7. *Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (for example, websites)?*
+	- TBD
+8. *Were the individuals in question notified about the data collection? If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.*
+	- TBD
+9. *Did the individuals in question consent to the collection and use of their data? If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.*
+	- TBD
+10. *If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses? If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).*
+	- TBD
+11. *Has an analysis of the potential impact of the dataset and its use on data subjects (for example, a data protection impact analysis) been conducted? If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.*
+	- TBD
+12. *Any other comments?*
+	- TBD
+
+**Preprocessing/cleaning/labeling**
+
+1. *Was any preprocessing/cleaning/labeling of the data done (for example, discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section.*
+	- TBD
+2. *Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (for example, to support unanticipated future uses)? If so, please provide a link or other access point to the "raw" data.*
+	- TBD
+3. *Is the software that was used to preprocess/clean/label the data available? If so, please provide a link or other access point.*
+	- TBD
+4. *Any other comments?*
+	- TBD
+
+**Uses**
+
+1. *Has the dataset been used for any tasks already? If so, please provide a description.*
+	- TBD
+2. *Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.*
+	- TBD
+3. *What (other) tasks could the dataset be used for?*
+	- TBD
+4. *Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (for example, stereotyping, quality of service issues) or other risks or harms (for example, legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms?*
+	- TBD
+5. *Are there tasks for which the dataset should not be used? If so, please provide a description.*
+	- TBD
+6. *Any other comments?*
+	- TBD
+
+**Distribution**
+
+1. *Will the dataset be distributed to third parties outside of the entity (for example, company, institution, organization) on behalf of which the dataset was created? If so, please provide a description.*
+	- TBD
+2. *How will the dataset be distributed (for example, tarball on website, API, GitHub)? Does the dataset have a digital object identifier (DOI)?*
+	- TBD
+3. *When will the dataset be distributed?*
+	- TBD
+4. *Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)? If so, please describe this license and/ or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.*
+	- TBD
+5. *Have any third parties imposed IP-based or other restrictions on the data associated with the instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.*
+	- TBD
+6. *Do any export controls or other regulatory restrictions apply to the dataset or to individual instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.*
+	- TBD
+7. *Any other comments?*
+	- TBD
+
+**Maintenance**
+
+1. *Who will be supporting/hosting/maintaining the dataset?*
+	- TBD
+2. *How can the owner/curator/manager of the dataset be contacted (for example, email address)?*
+	- TBD
+3. *Is there an erratum? If so, please provide a link or other access point.*
+	- TBD
+4. *Will the dataset be updated (for example, to correct labeling errors, add new instances, delete instances)? If so, please describe how often, by whom, and how updates will be communicated to dataset consumers (for example, mailing list, GitHub)?*
+	- TBD
+5. *If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (for example, were the individuals in question told that their data would be retained for a fixed period of time and then deleted)? If so, please describe these limits and explain how they will be enforced.*
+	- TBD
+6. *Will older versions of the dataset continue to be supported/hosted/maintained? If so, please describe how. If not, please describe how its obsolescence will be communicated to dataset consumers.*
+	- TBD
+7. *If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so? If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to dataset consumers? If so, please provide a description.*
+	- TBD
+8. *Any other comments?*
+	- TBD
 
 \newpage
 
