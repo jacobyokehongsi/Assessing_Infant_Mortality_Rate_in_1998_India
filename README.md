@@ -1,7 +1,7 @@
-# Assessing the knowledge of AIDS amongst Women in 1997 Vietnam
+# Assessing Infant Mortality Rate: Problem stemming from Household Living Conditions, Women's Education and Health
 
 ## Overview of Paper
-This repository looks at data collected by Demographic and Health Survey in 1997 Vietnam. This paper will provide a brief snapshot into the knowledge of AIDS of women in Vietnam as of 1997, seeking to identify and monitor trends and the evolution of their knowledge. This will help guide the Vietnamese government as well as social services and corporations in designing policies and resources designed to best cater to the current needs of Vietnamese women.
+This repository looks at data collected by Demographic and Health Survey in 1998 India. This paper will provide a brief snapshot into the problem stemming from the high infant mortality rate in Indian states including Household Living Conditions, Women's Education and Health. This will help guide the Indian government as well as social services and corporations in designing policies and resources designed to best cater to the current needs of Indian women and children.
 
 ## Contents
 - Data: the data used in this report is in the form of .csv files, which can be found under /inputs/data
