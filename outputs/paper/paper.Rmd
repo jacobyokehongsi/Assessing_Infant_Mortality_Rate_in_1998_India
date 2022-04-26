@@ -5,7 +5,7 @@ author:
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_Infant_Mortality_Rate_in_1998_India"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "What areas can be improved in order to promote the well-being of women in India and hence, reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian women and infant in different states of India. We have found that the root cause of poor infant mortality rates stems from having poor living conditions that affect the likelihood of women to attain education and understand the importance of antenatal care and birth delivery assistance. We also explore other factors such as inheritable traits (unhealthy body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} demographics, health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet."
+abstract: "What areas can be improved in order to promote the well-being of women in India and hence, reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian women and infants in different states of India. We have found that the root cause of poor infant mortality rates stems from having poor living conditions that affect the likelihood of women to attain education and understand the importance of antenatal care and birth delivery assistance. We also explore other factors such as inheritable traits (unhealthy body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} demographics, health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet."
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -32,14 +32,14 @@ The DHS program was established in 1984 and has provided technical assistance to
 
 In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system [@dhs].
 
-The National Family Health Survey (NFHS-2: DHS program in India) on the state findings in India assesses key demographics of women and infant including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their infant. 
+The National Family Health Survey (NFHS-2: DHS program in India) on the state findings in India assesses key demographics of women and infants including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their infant. 
 
-The NFHS on women and infant's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and infant population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
+The NFHS on women and infants' health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and infant population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
 
-In this paper, we will explore the background and characteristics of Indian women and infant using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
+In this paper, we will explore the background and characteristics of Indian women and infants using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
 
 - How do various living conditions such as electricity, water and sanitation facilities affect the ability of women to attend school?
-- How does education affect women's health and their attention to antenatal care?
+- How does education affect women's healthcare decisions and their attention to antenatal care?
 - What are the factors that affect infant mortality rate?
 
 The rest of the paper explores the following: Section 2 explores the origin of the data, methods used to obtain the data and its strengths and weaknesses. Section 3 explores the results and the relationships between the variables. Lastly, Section 4 discusses the results as well as potential solutions and policies that could be implemented to improve infant mortality rate.
@@ -201,10 +201,10 @@ data %>%
 
 Figure \@ref(fig:decante) depicts the relationship between women involved in their own healthcare decisions and mothers receiving at least one antenatal check-up for births in the three years preceding the survey (in percent). Here, we observe that as the percent of women involved in own healthcare decisions increases, the percent of mothers receiving at least one antenatal check-up for births increases. This suggests that female individuals who are informed of their personal health care are also wary of having antenatal check-up conducted.
 
-## Mothers that receive antenatal check-up and the antenatal care they receive
-Here, we explore how mothers that have antenatal check-up affect the antenatal care they receive for births three years preceding the survey.
+## Mothers that receive antenatal check-up, antenatal care and birth delivery methods
+Here, we explore how mothers that have antenatal check-up affect the antenatal care (supplements and injections) they receive for births three years preceding the survey.
 
-### Antenatal Injections and Supplements
+### Antenatal Care (Supplements and Injections)
 
 ```{r anteiron, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and mothers receiving iron folic acid tablets or syrup (in percent)"}
 data %>% 
@@ -228,7 +228,7 @@ data %>%
 
 Figures \@ref(fig:anteiron) and \@ref(fig:anteinject) depict the relationships between mothers receiving at least one antenatal check-up with mothers receiving iron and folic acid tablets or syrup as well as two or more tetanus toxoid injections (in percent) respectively. We observe that as the percent of mothers receiving at least one antenatal check-up increases, the percent of mothers receiving two or more tetanus toxoid injections as well as iron and folic acid tablets or syrup increases. This suggests that as mothers attend antenatal check-ups, doctors are likely to prescribe the mothers with tetanus toxoid injections as well as iron and folic acid supplements which boosts the health of the mother for a good birth delivery.
 
-### Birth Delivery
+### Birth Delivery Methods
 ```{r antemed, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and deliveries in medical institutions (in percent)"}
 data %>% 
   ggplot(aes(x = antenatal, y = deli_med_inst)) +
@@ -268,7 +268,7 @@ data %>%
 
 Figure \@ref(fig:statemortal) depicts the distribution of infant mortality rate across the different states of India. Here, we observe that states with the highest infant mortality rates include Meghalaya, Uttar Pradesh and Madhya Pradesh whereas states with the lowest infant mortality rates include Kerala, Himachal Pradesh and Goa.
 
-### Antenatal care and Delivery Methods of Mothers
+### Antenatal care and Delivery Methods
 Here, we explore how antenatal care such as supplements and injections as well as delivery methods affect the infant mortality rate for births in the three years preceding the survey.
 
 ```{r ironmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving iron and folic acid tablets or syrup and infant mortality rate (in percent)"}
@@ -311,7 +311,7 @@ data %>%
 
 Figures \@ref(fig:medmortal) and \@ref(fig:promortal) depicts the relationship between deliveries in medical institutions and deliveries assisted by a health professional (in percent) with the infant mortality rate respectively. Here, we observe that as the percent of deliveries in medical institutions and deliveries assisted by a health professional increases, the infant mortality rate decreases. This implies that mothers that receive professional care during birth deliveries will also have a smooth child birth.
 
-## Infants that receive exclusively breastmilk and both breastmilk and solid food
+### Infants that receive exclusively breastmilk and both breastmilk and solid food
 
 ```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 0-3 months exclusively breastfed and infant mortality rate (in percent)"}
 data %>% 
@@ -334,7 +334,7 @@ data %>%
 
 Figures \@ref(fig:breastmortal) and \@ref(fig:breastfoodmortal) portrays the relationship between infant age 0-3 months exclusively breastfed, and infant age 6-9 months receiving breast milk and solid/mushy food (in percent) with the infant mortality rate respectively. Here, we observe that the percent of infant age 0-3 months that are exclusively breastfed does not have a significant impact on infant mortality rate. On the other hand, as the percent of infant age 6-9 months receiving breast milk and solid/mushy food increases, the infant mortality rate decreases. This indicates that regardless of breast milk or formula milk fed to infants at age 0-3 months, infant mortality rate is not affected. However, as infant grow to the age of 6-9 months, they should be provided solid/mushy food on top of breast milk to support their growth and reduce the risk of mortality.
 
-## Relationship between a women's body mass index (BMI), infant's weight and mortality rate
+### Relationship between a women's body mass index (BMI), infant's weight and mortality rate
 
 ```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between women with BMI below 18.5 kg/m  and infant under age three that are underweight (in percent)"}
 data %>% 
@@ -358,7 +358,7 @@ data %>%
 
 Figure \@ref(fig:undermortal) depicts the relationship between infant under age three years that are underweight (in percent) and infant mortality rate. Here, we observe that as the percent of infant under age three that are underweight increases, the infant mortality rate increases. From this we can infer that infant who are not underweight tends to be in good health which reduces infant mortality rate.
 
-## Relationship between women with anaemia, infant with anaemia and infant mortality rate
+### Relationship between women with anaemia, infant with anaemia and infant mortality rate
 
 ```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between women age 15–49 with any anaemia and infant age 6–35 months with any anaemia (in percent)"}
 data %>% 
@@ -390,8 +390,8 @@ The household living environment of individuals including access to electricity,
 
 Having an educated female population, we observe that women are more involved in making decisions regarding their own health care. By paying a higher attention to their personal health, women would devote more time and effort in ensuring a healthy lifestyle. In more developed states such as Himachal Pradesh, 97.3% of females age 6-14 are attending school. As these females become mothers, their personal knowledge on healthcare would be carried forward to having antenatal care which is shown as 80.8% of women is involved in decisions about their own health care in Himachal Pradesh. 
 
-## Antenatal check-ups, injections and supplements to promote mothers and infant health
-Attending antenatal check-ups is key for protecting the health of women and their unborn infant. During antenatal check-ups, it is likely that doctors prescribe supplements and procedures needed in order for a smooth child birth. This includes iron and folic acid supplements that supports the development of the placenta and fetus as well as preventing neural tube defects respectively [@ironfolic]. In addition, tetanus toxoid injections help prevent neonatal tetanus [@tetanus]. Furthermore, partaking in check-ups will also increase the likelihood of having child deliveries in medical institutions and/or by a health professional since the check-ups are conducted in a similar fashion. Child deliveries in this manner are safe and sanitary, ensuring that complications are minimized when the baby is delivered. In our data, we observe that in states where mothers often receive at least one antenatal check-up such as Goa (99.0% of mothers receiving at least one antenatal check-up), they also pay more attention to antenatal care where mothers receive two or more tetanus toxoid injections (86.1%), iron and folic acid tablets or syrups (94.7%) as well as having their infant delivered in medical institutions (90.8%) and/or by a health professional (90.8%). 
+## Antenatal check-ups, antenatal care and delivery methods to promote mothers and infants health
+Attending antenatal check-ups is key for protecting the health of women and their unborn infants. During antenatal check-ups, it is likely that doctors prescribe supplements and procedures needed in order for a smooth child birth. This includes iron and folic acid supplements that supports the development of the placenta and fetus as well as preventing neural tube defects respectively [@ironfolic]. In addition, tetanus toxoid injections help prevent neonatal tetanus [@tetanus]. Furthermore, partaking in check-ups will also increase the likelihood of having child deliveries in medical institutions and/or by a health professional since the check-ups are conducted in a similar fashion. Child deliveries in this manner are safe and sanitary, ensuring that complications are minimized when the baby is delivered. In our data, we observe that in states where mothers often receive at least one antenatal check-up such as Goa (99.0% of mothers receiving at least one antenatal check-up), they also pay more attention to antenatal care where mothers receive two or more tetanus toxoid injections (86.1%), iron and folic acid tablets or syrups (94.7%) as well as having their infant delivered in medical institutions (90.8%) and/or by a health professional (90.8%). 
 
 ## Meals of infants and their effects on infant mortality rate
 The diet of an infant is one of the most important fundamentals in a child's health. An infant has to be well-fed in order to receive the nutrients and vitamins required for a healthy body. To recap, we observe that for infant age 0-3 months, being exclusively breastfed does not have a significant impact on the infant mortality rate. On the other hand, for infant age 6-9 months, it is important that they receive solid/mushy food to supplement the breast milk they are consuming. States such as Rajasthan with low percent of infant age 6-9 months receiving breast milk and solid/mushy food (17.5%) also have high infant mortality rates (80.4%). As a child grows to more than 6 months old, the nutrients supplied by the breast milk is simply insufficient to develop a healthy immune system. Thus, it is vital that infants are supplied with ample amount of nutritious solid foods on top of breast/formula milk to promote a healthy growth.
@@ -460,7 +460,7 @@ To summarize, there are numerous factors that could affect infant mortality rate
 12. *Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.*
 	- The dataset does not contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety.
 13. *Does the dataset identify any sub-populations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.*
-	- The dataset identifies women and infant below age three.
+	- The dataset identifies women and infants below age three.
 14. *Is it possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset? If so, please describe how.*
 	- It is not possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset.
 15. *Does the dataset contain data that might be considered sensitive in any way (for example, data that reveals race or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.*
@@ -513,7 +513,7 @@ To summarize, there are numerous factors that could affect infant mortality rate
 2. *Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.*
 	- https://github.com/jacobyokehongsi/Assessing_Infant_Mortality_Rate_in_1998_India
 3. *What (other) tasks could the dataset be used for?*
-	- Tasks could include analyzing the demographics of women and infant in India during 1998-1999.
+	- Tasks could include analyzing the demographics of women and infants in India during 1998-1999.
 4. *Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (for example, stereotyping, quality of service issues) or other risks or harms (for example, legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms?*
 	- The preprocessing is curated just for this specific dataset and cannot be applied to other datasets.
 5. *Are there tasks for which the dataset should not be used? If so, please provide a description.*
