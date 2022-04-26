@@ -1,10 +1,11 @@
 ---
-title: "Assessing the knowledge of AIDS amongst Women in 1997 Vietnam"
+title: "Assessing Infant Mortality Rate: Problem stemming from Household Living Conditions, Women's Education and Health"
+subtitle: "Trends in India from the 1998 Demographic Health Survey"
 author: 
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_the_Knowledge_of_AIDS_amongst_Women_in_1997_Vietnam"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "In what areas of women's and children's health and living conditions can be improved? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian Women and Children in different states of India. third sentence: specify the headline result; and a fourth sentence about implications. We found that most families are small, well-off and in good mental health, and that immigrants make up about one fifth of the population, with a propensity to settle in larger cities and urban centers. We also discuss possible factors that may have influenced this family image, including Canada's investment in family planning and immigration levels planning. \\par \\textbf{Keywords:} AIDS, vietnamese women, source, age group, regions, levels of education"
+abstract: "What areas of women's and children's health and living conditions can be improved in order to reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian Women and Children in different states of India. We found that the root cause of poor infant mortality rates stem from having poor living conditions. The living environment affects the likelihood of women to attain education and understand the importance of antenatal care. We also explore other factors such as inheritable traits (body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet"
 output:
   bookdown::pdf_document2
 toc: FALSE
