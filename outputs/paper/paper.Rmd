@@ -66,7 +66,7 @@ As mentioned in the previous section, participants of this survey were chosen vi
 ## Key features
 The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity and toilets, infant mortality rate, mothers receiving antenatal care, vaccination status of children, anaemia statuses (mothers and children) and weight statuses (mothers and children).
 
-We used R (R Core Team 2020) and R package tidyverse (Wickham et al. 2019) to preprocess and analyze the data. When preprocessing the data, we also use R package pointblank (cite) to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1, which was made using R package knitr (cite).
+We used R [@citeR] and R package tidyverse [@tidy] to preprocess and analyze the data. When preprocessing the data, we also use R package pointblank (cite) to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1, which was made using R package knitr (cite).
 
 
 ```{r datafeatures, echo=FALSE, message=FALSE}
@@ -74,7 +74,7 @@ data %>%
   select(state, att_school, electricity, infant_mortality) %>%
   slice(1:10) %>%
   kable(
-    caption = "Several Key Features Analyzed in the Paper",
+    caption = "Several Key Features (in percent) Analyzed in the Paper",
     col.names = c("State", "Females Age 6-14 Attending School", "Households with Electricity", "Infant Mortality Rate"),
     digits = 1,
     booktabs = TRUE, 
@@ -84,11 +84,11 @@ data %>%
 
 ```{r datafeatures2, echo=FALSE, message=FALSE}
 data %>%
-  select(state, underweight, women_anaemia) %>%
+  select(state, antenatal, underweight, women_anaemia) %>%
   slice(1:10) %>%
   kable(
-    caption = "Several Key Features Analyzed in the Paper Continued.",
-    col.names = c("State", "Children under Age Three that are Underweight", "Women Age 15-49 with any Anaemia"),
+    caption = "Several Key Features (in percent) Analyzed in the Paper Continued.",
+    col.names = c("State", "Mothers >= 1 antenatal check-up", "Underweight Children < Age 3", "Women with Anaemia"),
     digits = 1,
     booktabs = TRUE, 
     linesep = ""
@@ -385,17 +385,25 @@ data %>%
 Figure \@ref(fig:childmortal) depicts the children age 6–35 months with any anaemia (in percent) and infant mortality rate. Here, we observe that as the percent of children age 6–35 months with any anaemia increases, the infant mortality rate increases. From this we can infer that children who have the anaemia disease would have symptoms that lead to critical health conditions and death.
 
 # Discussion
+The ultimate goal of the paper is to assist policy makers in implementing appropriate and efficient socio-economic policies to help promote the growth of children and reduce infant mortality rate in India. We will first discuss the root of the issue which is the household living environment, women's education and their healthcare decisions which lead them to attend antenatal check-ups. Then, we examine the numerous factors that is affected by conducting antenatal check-ups which include antenatal supplements and birth delivery methods. These factors are one of the few that directly impact the infant mortality rate. Additionally, we also look at the importance of infant's meals in their growth. Lastly, we examine inheritable traits such as anaemia and body weight that could be passed on from mother to child and how they impact the infant mortality rate.
 
-## First discussion point
+## Household Living Environment, Women's Education and their Healthcare Decisions 
+The household living environment of individuals including access to electricity, clean water and sanitation facilities is crucial in providing a comfortable and productive living space. As observed previously, households with better living conditions will also lead to women who are able to attend school and be well educated. In our figures, we could infer that households in India with poorer living conditions also have fewer women attending school. Thus, emphasis should be put in developing the living conditions within households in India, especially states with poorer living conditions such as Bihar. In Bihar, only 18.2% of the households have access to electricity and 54.1% of females attending school. With such poor basic needs and living standards, there is no doubt that the women is unable to attend school. By developing the living conditions, it will in turn improve the well-being of the population and encourage women to attend school. Another proposal could also be to provide direct subsidies for students in hopes to attain a well educated population. 
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+Having an educated female population, we observe that women are more involved in making decisions regarding their own health care. By paying a higher attention to their personal health, women would devote more time and effort in ensuring a healthy lifestyle. In more developed states such as Himachal Pradesh, 97.3% of females age 6-14 are attending school. As these females become mothers, their personal knowledge on healthcare would be carried forward to having antenatal care which is shown as 80.8% of women is involved in decisions about their own health care in Himachal Pradesh. 
 
-## Second discussion point
+## Antenatal check-ups, injections and supplements to promote mothers and infant health
+Attending antenatal check-ups is key for protecting the health of women and their unborn children. During antenatal check-ups, it is likely that doctors prescribe supplements and procedures needed in order for a smooth child birth. This includes iron and folic acid supplements that supports the development of the placenta and fetus as well as enabling the red blood cells in the body to supply oxygen to the child (https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/prenatal-vitamins/art-20046945#:~:text=Ideally%2C%20you'll%20begin%20taking,of%20healthy%20red%20blood%20cells.), and tetanus toxoid injections to prevent neonatal tetanus (https://www.cdc.gov/pertussis/pregnant/hcp/vaccine-safety.html#:~:text=Pregnant%20women%20have%20been%20getting,1960s%20to%20prevent%20neonatal%20tetanus.). Furthermore, partaking in check-ups will also increase the likelihood of having child deliveries in medical institutions and/or by a health professional since the check-ups are conducted in a similar fashion. Child deliveries in this manner are safe and sanitary, ensuring that the baby is delivered without any infections or accidents. In our data, we observe that in states where mothers often receive at least one antenatal check-up such as Goa (99.0% of mothers receiving at least one antenatal check-up), they also pay more attention to antenatal care where mothers receive two or more tetanus toxoid injections (86.1%), iron and folic acid tablets or syrups (94.7%) as well as having their infant delivered in medical institutions (90.8%) and/or by a health professional (90.8%). 
 
-## Third discussion point
+## Meals of infants and their effects on infant mortality rate
+The diet of an infant is one of the most important fundamentals in a child's health. An infant has to be well-fed in order to receive the nutrients and vitamins required for a healthy body. To recap, we observe that for children age 0-3 months, being exclusively breastfed does not have a significant impact on the infant mortality rate. On the other hand, for children age 6-9 months, it is important that they receive solid/mushy food to supplement the breast milk they are consuming. States such as Rajasthan with low percent of children age 6-9 months receiving breast milk and solid/mushy food (17.5%) also have high infant mortality rates (80.4%). As a child grows, the nutrients supplied by the breast milk is simply insufficient to develop a healthy immune system. Thus, it is vital that children are supplied with ample amount of nutritious solid foods on top of breast/formula milk to promote a healthy growth.
+
+## Body weight of mothers and children and their effect on infant mortality rate
+
+## Anaemia of mothers and children and their effect on infant mortality rate
 
 ## Weaknesses and next steps
-
+- combination of all these factors
 
 \newpage
 
@@ -459,89 +467,89 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 1. *How was the data associated with each instance acquired? Was the data directly observable (for example, raw text, movie ratings), reported by subjects (for example, survey responses), or indirectly inferred/derived from other data (for example, part-of-speech tags, model-based guesses for age or language)? If the data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.*
 	- The data associated with each instance is acquired through interviews conducted in 25 Indian states.
 2. *What mechanisms or procedures were used to collect the data (for example, hardware apparatuses or sensors, manual human curation, software programs, software APIs)? How were these mechanisms or procedures validated?*
-	- TBD
+	- Questionnaires are first filled out using manual human curation then entered into microcomputers to produce field-check tables which ensures that the data is free from errors.
 3. *If the dataset is a sample from a larger set, what was the sampling strategy (for example, deterministic, probabilistic with specific sampling probabilities)?*
-	- TBD
+	- The dataset is not a sample from a larger set.
 4. *Who was involved in the data collection process (for example, students, crowdworkers, contractors) and how were they compensated (for example, how much were crowdworkers paid)?*
-	- TBD
+	- The fieldwork in each state was carried out by a number of interviewing teams, each team consisting of one field supervisor, one female field editor, four female interviewers, and one health investigator. Compensation data is not provided.
 5. *Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (for example, recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created.*
-	- TBD
+	- The data collection was carried out in two phases, starting in November 1998 and March 1999. The timeframe matches the creation timeframe of the data associated with the instances.
 6. *Were any ethical review processes conducted (for example, by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.*
-	- TBD
+	- Ethical review processes were not conducted
 7. *Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (for example, websites)?*
-	- TBD
+	- The data is obtained from the Demographic and Health Survey program website. https://dhsprogram.com/publications/publication-frind2-dhs-final-reports.cfm?cssearch=467922_1
 8. *Were the individuals in question notified about the data collection? If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.*
-	- TBD
+	- The individuals in question were notified as they voluntarily provide data to the interviewers. The exact language of the notification is not available.
 9. *Did the individuals in question consent to the collection and use of their data? If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.*
-	- TBD
+	- The individuals in question consent to the collection and use of their data. For example, the health investigator read a detailed informed consent statement to the respondent, informing her about anaemia, describing the procedure to be followed for the test, and emphasizing the voluntary nature of the test. The exact language is as follows. "May I ask you now to give your consent to have the test(s) done. If you decide not to have the test(s), it is your right, and we will respect your decision. Now please tell me whether you agree to have the test(s)(and allow me to test your child)."
 10. *If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses? If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).*
-	- TBD
+	- Yes. In the questionnaire, they are allowed to revoke their consent.
 11. *Has an analysis of the potential impact of the dataset and its use on data subjects (for example, a data protection impact analysis) been conducted? If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.*
-	- TBD
+	- Analysis of the potential impact of the dataset and its use on data subjects has not been conducted.
 12. *Any other comments?*
-	- TBD
+	- N/A
 
 **Preprocessing/cleaning/labeling**
 
 1. *Was any preprocessing/cleaning/labeling of the data done (for example, discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section.*
-	- TBD
+	- Preprocessing/cleaning/labeling of the data was done. The original format of the file is in pdf and the data was extracted using R package pdftools and R in order for data analysis to be conducted.
 2. *Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (for example, to support unanticipated future uses)? If so, please provide a link or other access point to the "raw" data.*
-	- TBD
+	- The raw data is saved in inputs/data/raw_data1.csv, inputs/data/raw_data2.csv and inputs/data/raw_data3.csv
 3. *Is the software that was used to preprocess/clean/label the data available? If so, please provide a link or other access point.*
-	- TBD
+	- R software is available at https://www.r-project.org/
 4. *Any other comments?*
-	- TBD
+	- N/A
 
 **Uses**
 
 1. *Has the dataset been used for any tasks already? If so, please provide a description.*
-	- TBD
+	- The dataset has not been used for other tasks yet.
 2. *Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.*
 	- TBD
 3. *What (other) tasks could the dataset be used for?*
-	- TBD
+	- Tasks could include analyzing the demographics of women and children in India during 1998-1999.
 4. *Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (for example, stereotyping, quality of service issues) or other risks or harms (for example, legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms?*
-	- TBD
+	- The preprocessing is curated just for this specific dataset and cannot be applied to other datasets.
 5. *Are there tasks for which the dataset should not be used? If so, please provide a description.*
-	- TBD
+	- N/A
 6. *Any other comments?*
-	- TBD
+	- N/A
 
 **Distribution**
 
 1. *Will the dataset be distributed to third parties outside of the entity (for example, company, institution, organization) on behalf of which the dataset was created? If so, please provide a description.*
-	- TBD
+	- The dataset will not be distributed to third parties outside of the entity on behalf of which the dataset was created.
 2. *How will the dataset be distributed (for example, tarball on website, API, GitHub)? Does the dataset have a digital object identifier (DOI)?*
-	- TBD
+	- The dataset will be distributed on Github.
 3. *When will the dataset be distributed?*
-	- TBD
+	- The dataset will be distributed during April 2022.
 4. *Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)? If so, please describe this license and/ or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.*
-	- TBD
+	- The dataset will be distributed under the MIT license. 
 5. *Have any third parties imposed IP-based or other restrictions on the data associated with the instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.*
-	- TBD
+	- No third parties have imposed IP-based or other restrictions on the data associated with the instances.
 6. *Do any export controls or other regulatory restrictions apply to the dataset or to individual instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.*
-	- TBD
+	- No export controls or other regulatory restrictions apply to the dataset or to individual instances.
 7. *Any other comments?*
-	- TBD
+	- N/A
 
 **Maintenance**
 
 1. *Who will be supporting/hosting/maintaining the dataset?*
-	- TBD
+	- Jacob Yoke Hong Si
 2. *How can the owner/curator/manager of the dataset be contacted (for example, email address)?*
-	- TBD
+	- Through email at jacobyh.si@mail.utoronto.ca.
 3. *Is there an erratum? If so, please provide a link or other access point.*
-	- TBD
+	- There is no erratum.
 4. *Will the dataset be updated (for example, to correct labeling errors, add new instances, delete instances)? If so, please describe how often, by whom, and how updates will be communicated to dataset consumers (for example, mailing list, GitHub)?*
-	- TBD
+	- There is no plan to update the dataset. Any updates will be communicated to dataset consumers via Github.
 5. *If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (for example, were the individuals in question told that their data would be retained for a fixed period of time and then deleted)? If so, please describe these limits and explain how they will be enforced.*
-	- TBD
+	- There are no applicable limits on the retention of the data associated with the instances.
 6. *Will older versions of the dataset continue to be supported/hosted/maintained? If so, please describe how. If not, please describe how its obsolescence will be communicated to dataset consumers.*
-	- TBD
+	- Older versions will not be hosted. Its obsolenscence is communicated via commit history on Github.
 7. *If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so? If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to dataset consumers? If so, please provide a description.*
-	- TBD
+	- The repository on Github can be cloned to extend/augment/build on/contribute to the dataset. Contributions will not be validated/verified since I am not responsible for any other dataset extensions. 
 8. *Any other comments?*
-	- TBD
+	- N/A
 
 \newpage
 
