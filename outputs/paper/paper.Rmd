@@ -5,7 +5,7 @@ author:
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_Infant_Mortality_Rate_in_1998_India"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "What areas of women's and children's health and living conditions can be improved in order to reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian Women and Children in different states of India. We found that the root cause of poor infant mortality rates stem from having poor living conditions. The living environment affects the likelihood of women to attain education and understand the importance of antenatal care. We also explore other factors such as inheritable traits (body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet"
+abstract: "What areas of women's health and living conditions can be improved in order to reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian women and infant in different states of India. We found that the root cause of poor infant mortality rates stem from having poor living conditions. The living environment affects the likelihood of women to attain education and understand the importance of antenatal care. We also explore other factors such as inheritable traits (body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -32,11 +32,11 @@ The DHS program was established in 1984 and has provided technical assistance to
 
 In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system. (https://en.wikipedia.org/wiki/Demographic_and_Health_Surveys)
 
-The National Family Health Survey (DHS program in India) on the state findings in India assesses key demographics of women and children including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their children. 
+The National Family Health Survey (DHS program in India) on the state findings in India assesses key demographics of women and infant including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their infant. 
 
-The DHS on women and children's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and children population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
+The DHS on women and infant's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and infant population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
 
-In this paper, we will explore the background and characteristics of Indian women and children using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
+In this paper, we will explore the background and characteristics of Indian women and infant using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
 
 - How do various living conditions such as electricity, water and sanitation facilities affect the ability of women to attend school?
 - How does education affect women's health and their attention to prenatal care?
@@ -47,7 +47,7 @@ The rest of the paper explores the following: Section 2 explores the origin of t
 # Data
 ## Data Source and Methodology
 
-The data was obtained from India’s second National Family Health Survey (NFHS-2) on women's and children's health. The survey was conducted in 1998-1999 by the International Institute for Population Sciences (IIPS) by the Indian government using the NFHS questionnaire where households would be interviewed. The questionnaire was devised during workshops held in Mumbai where experts in population and health fields would partake in creating the questions. The target population was a sample of more than 90,000 ever-married women age 15–49 as well as children born in the three years preceding the survey. The list of villages is used as a sampling frame and first stratified through several variables. Next, the participants were selected using systematic sampling with equal probability from a household list in each village area. The overall individual response rate was 96% with a total of 89,199 eligible women that are part of the 91,196 interviewed households. 
+The data was obtained from India’s second National Family Health Survey (NFHS-2) on women's and infant's health. The survey was conducted in 1998-1999 by the International Institute for Population Sciences (IIPS) by the Indian government using the NFHS questionnaire where households would be interviewed. The questionnaire was devised during workshops held in Mumbai where experts in population and health fields would partake in creating the questions. The target population was a sample of more than 90,000 ever-married women age 15–49 as well as infant born in the three years preceding the survey. The list of villages is used as a sampling frame and first stratified through several variables. Next, the participants were selected using systematic sampling with equal probability from a household list in each village area. The overall individual response rate was 96% with a total of 89,199 eligible women that are part of the 91,196 interviewed households. 
 
 The following is a brief outline of the questionnaire content on the 1998 India NFHS:
 
@@ -66,7 +66,7 @@ The following is a brief outline of the questionnaire content on the 1998 India 
 As mentioned in the previous section, participants of this survey were chosen via stratified sampling and systematic sampling. The survey frame that was created is as follows. The list of villages were first stratified by geographic location, then continuous regions and lastly further stratified using selected variables such as village size, female literacy and so on. Each state in India was stratified individually using these variables with a limit of 6 stratas for small states, 12 stratas for medium size states and 15 stratas for large states. From the list of stratified villages, they are then sampled systematically with probability proportional to the 1991 Census population of the village. The villages that have fewer than five households are not included in the sampling frame. Lastly, the individuals to be interviewed were selected with equal probability from the household list in each village area using systematic sampling.
 
 ## Key features
-The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity and toilets, infant mortality rate, mothers receiving antenatal care, vaccination status of children, anaemia statuses (mothers and children) and weight statuses (mothers and children).
+The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity and toilets, infant mortality rate, mothers receiving antenatal care, vaccination status of infant, anaemia statuses (mothers and infant) and weight statuses (mothers and infant).
 
 We used R [@citeR] and R packages tidyverse [@tidy] and pdftools [@pdftools] to extract, preprocess and analyze the data. When preprocessing the data, we also use R package pointblank [@pointblank] to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1, which was made using R package knitr [@knitr].
 
@@ -89,7 +89,7 @@ data %>%
   slice(1:10) %>%
   kable(
     caption = "Several Key Features (in percent) Analyzed in the Paper Continued.",
-    col.names = c("State", "Mothers >= 1 antenatal check-up", "Underweight Children < Age 3", "Women with Anaemia"),
+    col.names = c("State", "Mothers >= 1 antenatal check-up", "Underweight infant < Age 3", "Women with Anaemia"),
     digits = 1,
     booktabs = TRUE, 
     linesep = ""
@@ -101,7 +101,7 @@ data %>%
 The primary strengths of this survey is the myriad of variables describing participants and households, as well as the large sample size where more than 99 percent of India's female population is surveyed. Additionally, all Indian states except for one is surveyed, covering the majority of India. The field data collected by interviewing teams were inputted into microcomputers to produce field-check tables, ensuring that errors are prevented when eliciting information and filling out questionnaires. The large amount of variables allows for thorough data exploration of the relationships between them while the ample amount of data allows concrete conclusions to be drawn. Furthermore, the sampling methodologies is explained in high detail as well as a comprehensive fact sheet put together to display key data from the survey.
 
 ### Weaknesses
-One of the drawbacks of the survey is that survey findings were obtained in all states but one, that is Tripura, due to the delay in fieldwork based on a local problem. Additionally, data is unable to be obtained from areas with union territories. Nonsampling errors are also present where surveyors were unable to locate and interview the correct household and the misunderstanding of the questionnaire by the interviewer or respondent. In addition, the collection of anaemia data was hindered since some female participants refused to partake in the anaemia testing and/or have their children tested as well. These aforementioned weaknesses results in missing data thus, the inference we make could be less diverse.
+One of the drawbacks of the survey is that survey findings were obtained in all states but one, that is Tripura, due to the delay in fieldwork based on a local problem. Additionally, data is unable to be obtained from areas with union territories. Nonsampling errors are also present where surveyors were unable to locate and interview the correct household and the misunderstanding of the questionnaire by the interviewer or respondent. In addition, the collection of anaemia data was hindered since some female participants refused to partake in the anaemia testing and/or have their infant tested as well. These aforementioned weaknesses results in missing data thus, the inference we make could be less diverse.
 
 
 details of the methodology used by the DHS you used, and its key features, strengths, and weaknesses.
@@ -139,7 +139,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:elecsch) depicts the relationship between households with electricity and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with electricity increases, the percent of females age 6-14 attending school increases. This implies that households that can afford electricity tend to be more well-off and are able to send their children to school.
+Figure \@ref(fig:elecsch) depicts the relationship between households with electricity and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with electricity increases, the percent of females age 6-14 attending school increases. This implies that households that can afford electricity tend to be more well-off and are able to send their infant to school.
 
 ```{r watersch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school and households with drinking water piped or from hand pump (in percent)"}
 data %>% 
@@ -312,78 +312,78 @@ data %>%
 
 Figures \@ref(fig:medmortal) and \@ref(fig:promortal) depicts the relationship between deliveries in medical institutions and deliveries assisted by a health professional (in percent) with the infant mortality rate respectively. Here, we observe that as the percent of deliveries in medical institutions and deliveries assisted by a health professional increases, the infant mortality rate decreases. This implies that mothers that receive proper care during birth deliveries will also have a smooth child birth.
 
-## Children that receive breastmilk and/or both breastmilk and solid food
+## infant that receive breastmilk and/or both breastmilk and solid food
 
-```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and children age 0-3 months exclusively breastfed (in percent)"}
+```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 0-3 months exclusively breastfed (in percent)"}
 data %>% 
   ggplot(aes(x = breastfed, y = infant_mortality)) +
   geom_point() +
-  labs(x = "Percent of children age 0-3 months exclusively breastfed",
+  labs(x = "Percent of infant age 0-3 months exclusively breastfed",
        y = "Infant Mortality Rate") + 
   geom_smooth(method='lm')
 ```
 
-```{r breastfoodmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and children age 6-9 months receiving breast milk and solid/mushy food (in percent)"}
+```{r breastfoodmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 6-9 months receiving breast milk and solid/mushy food (in percent)"}
 data %>% 
   ggplot(aes(x = child_milkfood, y = infant_mortality)) +
   geom_point() +
-  labs(x = "Percent of children age 6-9 months receiving breast milk and solid/mushy food",
+  labs(x = "Percent of infant age 6-9 months receiving breast milk and solid/mushy food",
        y = "Infant Mortality Rate") + 
   geom_smooth(method='lm')
 ```
 
-Figures \@ref(fig:breastmortal) and \@ref(fig:breastfoodmortal) portrays the relationship between children age 0-3 months exclusively breastfed, and children age 6-9 months receiving breast milk and solid/mushy food (in percent) with the infant mortality rate respectively. Here, we observe that the percent of children age 0-3 months that are exclusively breastfed does not have a significant impact on infant mortality rate. On the other hand, as the percent of children age 6-9 months receiving breast milk and solid/mushy food increases, the infant mortality rate decreases. This indicates that regardless of breast milk or formula milk fed to children at age 0-3 months, infant mortality rate is not affected. However, as children grow to the age of 6-9 months, they should be provided solid/mushy food on top of breast milk to support their growth, reducing their mortality.
+Figures \@ref(fig:breastmortal) and \@ref(fig:breastfoodmortal) portrays the relationship between infant age 0-3 months exclusively breastfed, and infant age 6-9 months receiving breast milk and solid/mushy food (in percent) with the infant mortality rate respectively. Here, we observe that the percent of infant age 0-3 months that are exclusively breastfed does not have a significant impact on infant mortality rate. On the other hand, as the percent of infant age 6-9 months receiving breast milk and solid/mushy food increases, the infant mortality rate decreases. This indicates that regardless of breast milk or formula milk fed to infant at age 0-3 months, infant mortality rate is not affected. However, as infant grow to the age of 6-9 months, they should be provided solid/mushy food on top of breast milk to support their growth, reducing their mortality.
 
 ## Relationship between a women's body mass index (BMI), child's weight and infant mortality rate
 
-```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between children under age three that are underweight and women with BMI below 18.5 kg/m (in percent)"}
+```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant under age three that are underweight and women with BMI below 18.5 kg/m (in percent)"}
 data %>% 
   ggplot(aes(x = below_BMI, y = underweight)) +
   geom_point() +
   labs(x = "Percent of women with BMI below 18.5 kg/m",
-       y = "Percent of children under age three that are underweight") + 
+       y = "Percent of infant under age three that are underweight") + 
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:bmiunder) depicts the relationship between women with BMI below 18.5 kg/m and children under age three years that are underweight (in percent). Here, we observe that as the percent of women with BMI below 18.5 kg/m increases, the percent of children under age three years that are underweight increases. This implies that mothers that are skinny and malnutritioned would also lead to offsprings that are underweight.
+Figure \@ref(fig:bmiunder) depicts the relationship between women with BMI below 18.5 kg/m and infant under age three years that are underweight (in percent). Here, we observe that as the percent of women with BMI below 18.5 kg/m increases, the percent of infant under age three years that are underweight increases. This implies that mothers that are skinny and malnutritioned would also lead to offsprings that are underweight.
 
-```{r undermortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and children under age three years that are underweight (in percent)"}
+```{r undermortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant under age three years that are underweight (in percent)"}
 data %>% 
   ggplot(aes(x = underweight, y = infant_mortality)) +
   geom_point() +
-  labs(x = "Percent of children under age three years that are underweight",
+  labs(x = "Percent of infant under age three years that are underweight",
        y = "Infant Mortality Rate") + 
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:undermortal) depicts the relationship between children under age three years that are underweight (in percent) and infant mortality rate. Here, we observe that as the percent of children under age three that are underweight increases, the infant mortality rate increases. From this we can infer that children who are not underweight tends to be in good health which reduces infant mortality rate.
+Figure \@ref(fig:undermortal) depicts the relationship between infant under age three years that are underweight (in percent) and infant mortality rate. Here, we observe that as the percent of infant under age three that are underweight increases, the infant mortality rate increases. From this we can infer that infant who are not underweight tends to be in good health which reduces infant mortality rate.
 
-## Relationship between women with anaemia, children with anaemia and infant mortality rate
+## Relationship between women with anaemia, infant with anaemia and infant mortality rate
 
-```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between children age 6–35 months with any anaemia and women age 15–49 with any anaemia (in percent)"}
+```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 6–35 months with any anaemia and women age 15–49 with any anaemia (in percent)"}
 data %>% 
   ggplot(aes(x = women_anaemia, y = child_anaemia)) +
   geom_point() +
   labs(x = "Percent of women age 15–49 with any anaemia",
-       y = "Percent of children age 6–35 months with any anaemia") + 
+       y = "Percent of infant age 6–35 months with any anaemia") + 
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:womenchildanaem) depicts the relationship between women age 15-49 with any anaemia and children age 6-35 months with any anaemia (in percent). Here, we observe that as the percent of women age 15-49 with any anaemia increases, the percent of children age 6-35 months with any anaemia increases. This is coherent with the fact that since anaemia such as hemolytic anaemia can be inherited, mothers could pass on the anaemia to their offspring.
+Figure \@ref(fig:womenchildanaem) depicts the relationship between women age 15-49 with any anaemia and infant age 6-35 months with any anaemia (in percent). Here, we observe that as the percent of women age 15-49 with any anaemia increases, the percent of infant age 6-35 months with any anaemia increases. This is coherent with the fact that since anaemia such as hemolytic anaemia can be inherited, mothers could pass on the anaemia to their offspring.
 
-```{r childmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and children age 6–35 months with any anaemia (in percent)"}
+```{r childmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 6–35 months with any anaemia (in percent)"}
 data %>% 
   ggplot(aes(x = child_anaemia, y = infant_mortality)) +
   geom_point() +
-  labs(x = "Percent of children age 6–35 months with any anaemia",
+  labs(x = "Percent of infant age 6–35 months with any anaemia",
        y = "Infant Mortality Rate") + 
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:childmortal) depicts the children age 6–35 months with any anaemia (in percent) and infant mortality rate. Here, we observe that as the percent of children age 6–35 months with any anaemia increases, the infant mortality rate increases. From this we can infer that children who have the anaemia disease would have symptoms that lead to critical health conditions and death.
+Figure \@ref(fig:childmortal) depicts the infant age 6–35 months with any anaemia (in percent) and infant mortality rate. Here, we observe that as the percent of infant age 6–35 months with any anaemia increases, the infant mortality rate increases. From this we can infer that infant who have the anaemia disease would have symptoms that lead to critical health conditions and death.
 
 # Discussion
-The ultimate goal of the paper is to assist policy makers in implementing appropriate and efficient socio-economic policies to help promote the growth of children and reduce infant mortality rate in India. We will first discuss the root of the issue which is the household living environment, women's education and their healthcare decisions which lead them to attend antenatal check-ups. Then, we examine the numerous factors that is affected by conducting antenatal check-ups which include antenatal supplements and birth delivery methods. These factors are one of the few that directly impact the infant mortality rate. Additionally, we also look at the importance of infant's meals in their growth. Lastly, we examine inheritable traits such as anaemia and body weight that could be passed on from mother to child and how they impact the infant mortality rate. The full data can be found in Appendix B.
+The ultimate goal of the paper is to assist policy makers in implementing appropriate and efficient socio-economic policies to help promote the growth of infant and reduce infant mortality rate in India. We will first discuss the root of the issue which is the household living environment, women's education and their healthcare decisions which lead them to attend antenatal check-ups. Then, we examine the numerous factors that is affected by conducting antenatal check-ups which include antenatal supplements and birth delivery methods. These factors are one of the few that directly impact the infant mortality rate. Additionally, we also look at the importance of infant's meals in their growth. Lastly, we examine inheritable traits such as anaemia and body weight that could be passed on from mother to child and how they impact the infant mortality rate. The full data can be found in Appendix B.
 
 ## Household Living Environment, Women's Education and their Healthcare Decisions 
 The household living environment of individuals including access to electricity, clean water and sanitation facilities is crucial in providing a comfortable and productive living space. As observed previously, households with better living conditions will also lead to women who are able to attend school and be well educated. In our figures, we could infer that households in India with poorer living conditions also have fewer women attending school. Thus, emphasis should be put in developing the living conditions within households in India, especially states with poorer living conditions such as Bihar. In Bihar, only 18.2% of the households have access to electricity and 54.1% of females attending school. With such poor basic needs and living standards, there is no doubt that the women is unable to attend school. By developing the living conditions, it will in turn improve the well-being of the population and encourage women to attend school. Another proposal could also be to provide direct subsidies for students in hopes to attain a well educated population. 
@@ -391,23 +391,23 @@ The household living environment of individuals including access to electricity,
 Having an educated female population, we observe that women are more involved in making decisions regarding their own health care. By paying a higher attention to their personal health, women would devote more time and effort in ensuring a healthy lifestyle. In more developed states such as Himachal Pradesh, 97.3% of females age 6-14 are attending school. As these females become mothers, their personal knowledge on healthcare would be carried forward to having antenatal care which is shown as 80.8% of women is involved in decisions about their own health care in Himachal Pradesh. 
 
 ## Antenatal check-ups, injections and supplements to promote mothers and infant health
-Attending antenatal check-ups is key for protecting the health of women and their unborn children. During antenatal check-ups, it is likely that doctors prescribe supplements and procedures needed in order for a smooth child birth. This includes iron and folic acid supplements that supports the development of the placenta and fetus as well as enabling the red blood cells in the body to supply oxygen to the child [@ironfolic], and tetanus toxoid injections to prevent neonatal tetanus [@tetanus]. Furthermore, partaking in check-ups will also increase the likelihood of having child deliveries in medical institutions and/or by a health professional since the check-ups are conducted in a similar fashion. Child deliveries in this manner are safe and sanitary, ensuring that the baby is delivered without any infections or accidents. In our data, we observe that in states where mothers often receive at least one antenatal check-up such as Goa (99.0% of mothers receiving at least one antenatal check-up), they also pay more attention to antenatal care where mothers receive two or more tetanus toxoid injections (86.1%), iron and folic acid tablets or syrups (94.7%) as well as having their infant delivered in medical institutions (90.8%) and/or by a health professional (90.8%). 
+Attending antenatal check-ups is key for protecting the health of women and their unborn infant. During antenatal check-ups, it is likely that doctors prescribe supplements and procedures needed in order for a smooth child birth. This includes iron and folic acid supplements that supports the development of the placenta and fetus as well as enabling the red blood cells in the body to supply oxygen to the child [@ironfolic], and tetanus toxoid injections to prevent neonatal tetanus [@tetanus]. Furthermore, partaking in check-ups will also increase the likelihood of having child deliveries in medical institutions and/or by a health professional since the check-ups are conducted in a similar fashion. Child deliveries in this manner are safe and sanitary, ensuring that the baby is delivered without any infections or accidents. In our data, we observe that in states where mothers often receive at least one antenatal check-up such as Goa (99.0% of mothers receiving at least one antenatal check-up), they also pay more attention to antenatal care where mothers receive two or more tetanus toxoid injections (86.1%), iron and folic acid tablets or syrups (94.7%) as well as having their infant delivered in medical institutions (90.8%) and/or by a health professional (90.8%). 
 
 ## Meals of infants and their effects on infant mortality rate
-The diet of an infant is one of the most important fundamentals in a child's health. An infant has to be well-fed in order to receive the nutrients and vitamins required for a healthy body. To recap, we observe that for children age 0-3 months, being exclusively breastfed does not have a significant impact on the infant mortality rate. On the other hand, for children age 6-9 months, it is important that they receive solid/mushy food to supplement the breast milk they are consuming. States such as Rajasthan with low percent of children age 6-9 months receiving breast milk and solid/mushy food (17.5%) also have high infant mortality rates (80.4%). As a child grows, the nutrients supplied by the breast milk is simply insufficient to develop a healthy immune system. Thus, it is vital that children are supplied with ample amount of nutritious solid foods on top of breast/formula milk to promote a healthy growth.
+The diet of an infant is one of the most important fundamentals in a child's health. An infant has to be well-fed in order to receive the nutrients and vitamins required for a healthy body. To recap, we observe that for infant age 0-3 months, being exclusively breastfed does not have a significant impact on the infant mortality rate. On the other hand, for infant age 6-9 months, it is important that they receive solid/mushy food to supplement the breast milk they are consuming. States such as Rajasthan with low percent of infant age 6-9 months receiving breast milk and solid/mushy food (17.5%) also have high infant mortality rates (80.4%). As a child grows, the nutrients supplied by the breast milk is simply insufficient to develop a healthy immune system. Thus, it is vital that infant are supplied with ample amount of nutritious solid foods on top of breast/formula milk to promote a healthy growth.
 
-## Body weight and anaemia of mothers affecting children and the infant mortality rate
-Lastly, we will explore how inheritable traits that mothers possess such as body weight and diseases (anaemia) are inherited by their children and would be detrimental to their health. In our data exploration, women that have BMI below 18.5kg/m is considered to be underweight [@bmi]. Hence, women that are underweight would increase the likelihood of their offsprings being underweight and malnourished. Without a strong functional health system, the child would be weak and frail resulting in a higher rate of infant deaths.
+## Body weight and anaemia of mothers affecting infant and the infant mortality rate
+Lastly, we will explore how inheritable traits that mothers possess such as body weight and diseases (anaemia) are inherited by their infant and would be detrimental to their health. In our data exploration, women that have BMI below 18.5kg/m is considered to be underweight [@bmi]. Hence, women that are underweight would increase the likelihood of their offsprings being underweight and malnourished. Without a strong functional health system, the child would be weak and frail resulting in a higher rate of infant deaths.
 
-On the other hand, children could also inherit anaemia diseases from their mother. Anaemia is a condition in which the body does not have sufficient healthy red blood cells to carry adequate oxygen around the body. Symptoms of anaemia include tiredness, shortness of breath, irregular heartbeats and more [@anaemia]. As children are born with this disease, they are fatigued and sick leading to their poor health and death. In the northeast state of Assam, the percent of women age 15-49 with any anaemia is approximately 69.7% which also corresponds to the high anaemia rates of 63.2% in children age 6-35 months. The percentage of children with anaemia is relatively close to the percentage of women with anaemia. From this, we can infer that children are most likely to have inherited this disease from their mother.
+On the other hand, infant could also inherit anaemia diseases from their mother. Anaemia is a condition in which the body does not have sufficient healthy red blood cells to carry adequate oxygen around the body. Symptoms of anaemia include tiredness, shortness of breath, irregular heartbeats and more [@anaemia]. As infant are born with this disease, they are fatigued and sick leading to their poor health and death. In the northeast state of Assam, the percent of women age 15-49 with any anaemia is approximately 69.7% which also corresponds to the high anaemia rates of 63.2% in infant age 6-35 months. The percentage of infant with anaemia is relatively close to the percentage of women with anaemia. From this, we can infer that infant are most likely to have inherited this disease from their mother.
 
 ## Weaknesses and next steps
 
 There are a few weaknesses in the paper that I will evaluate. Firstly, the data is not collected by myself and hence, we only know as much about the methodology behind it as we've been provided. Despite this being a potentially major issue, the IIPS did more than their due diligence by providing supple information in explaining every aspects of the survey including the survey methodology and sampling techniques as well as documenting detailed variable names. However, there could be potential biases that is unaccounted for by the IIPS that includes the sampling or surveying process and ethical considerations that impacts the data collection in which we have no information about them.
 
-Another possible weakness in our paper is the uncertainty in which the factors are individually correlated to the infant mortality rate. For instance, children that do not receive solid/mushy food is not the sole reason for the deaths in the children. Instead, it is the amalgamation of all the different factors analysed that leads to the deaths of infants. As a next step for this issue, we could conduct statistical tests such as t-tests to determine if individual variables are statistically significant when regressed on the infant mortality rate. Apart from the aforementioned variables, there are factors such as the household income, family size etc. that could affect a child's ability of attending school. Hence, by collecting more data on more variables, we would be able to make even more concrete conclusions with regards to the factors that contribute to infant mortality.
+Another possible weakness in our paper is the uncertainty in which the factors are individually correlated to the infant mortality rate. For instance, infant that do not receive solid/mushy food is not the sole reason for the deaths in the infant. Instead, it is the amalgamation of all the different factors analysed that leads to the deaths of infants. As a next step for this issue, we could conduct statistical tests such as t-tests to determine if individual variables are statistically significant when regressed on the infant mortality rate. Apart from the aforementioned variables, there are factors such as the household income, family size etc. that could affect a child's ability of attending school. Hence, by collecting more data on more variables, we would be able to make even more concrete conclusions with regards to the factors that contribute to infant mortality.
 
-To summarise, there are numerous factors that could affect infant mortality rate which includes the weight of a child, whether a child has anaemia, diet of the child and the prenatal health of the mother. The health of the mother stems from the education she undertook and the living conditions she grew up in. Hence, it is crucial for the government to develop policies that solves the problem at its root by first improving the living standards of households, starting with states such as Bihar with the poorest living conditions. The government could also build more schools as well as subsidize education expenses for families which encourages them to send their children to school. Having adequate to good living conditions and educated women would improve the health of the mother and her offspring, resulting in a healthier future generation of India. 
+To summarise, there are numerous factors that could affect infant mortality rate which includes the weight of a child, whether a child has anaemia, diet of the child and the prenatal health of the mother. The health of the mother stems from the education she undertook and the living conditions she grew up in. Hence, it is crucial for the government to develop policies that solves the problem at its root by first improving the living standards of households, starting with states such as Bihar with the poorest living conditions. The government could also build more schools as well as subsidize education expenses for families which encourages them to send their infant to school. Having adequate to good living conditions and educated women would improve the health of the mother and her offspring, resulting in a healthier future generation of India. 
 
 \newpage
 
@@ -444,7 +444,7 @@ To summarise, there are numerous factors that could affect infant mortality rate
 5. *Is there a label or target associated with each instance? If so, please provide a description.*
 	- Theres is no target associated with each instance.
 6. *Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (for example, because it was unavailable). This does not include intentionally removed information, but might include, for example, redacted text.*
-	- Under the instance Goa and variable percent of children age 0-3 months exclusively breastfed, information is missing because the data collected is based on fewer than 25 unweighted cases.
+	- Under the instance Goa and variable percent of infant age 0-3 months exclusively breastfed, information is missing because the data collected is based on fewer than 25 unweighted cases.
 7. *Are relationships between individual instances made explicit (for example, users' movie ratings, social network links)? If so, please describe how these relationships are made explicit.*
 	- There are no relationships between individual instances.
 8. *Are there recommended data splits (for example, training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.*
@@ -458,7 +458,7 @@ To summarise, there are numerous factors that could affect infant mortality rate
 12. *Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.*
 	- The dataset does not contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety.
 13. *Does the dataset identify any sub-populations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.*
-	- The dataset identifies women and children below age three.
+	- The dataset identifies women and infant below age three.
 14. *Is it possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset? If so, please describe how.*
 	- It is not possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset.
 15. *Does the dataset contain data that might be considered sensitive in any way (for example, data that reveals race or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.*
@@ -511,7 +511,7 @@ To summarise, there are numerous factors that could affect infant mortality rate
 2. *Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.*
 	- https://github.com/jacobyokehongsi/Assessing_Infant_Mortality_Rate_in_1998_India
 3. *What (other) tasks could the dataset be used for?*
-	- Tasks could include analyzing the demographics of women and children in India during 1998-1999.
+	- Tasks could include analyzing the demographics of women and infant in India during 1998-1999.
 4. *Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (for example, stereotyping, quality of service issues) or other risks or harms (for example, legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms?*
 	- The preprocessing is curated just for this specific dataset and cannot be applied to other datasets.
 5. *Are there tasks for which the dataset should not be used? If so, please provide a description.*

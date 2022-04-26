@@ -1,18 +1,17 @@
 # Simulation of a plan for the usable dataset
 
-# NOTE: OUR DATASET IS ONLY FEMALES AND KIDS
-
 library(ggplot2)
 
-mat <- matrix(runif(12, 0, 100), nrow=4, byrow=TRUE)
+mat <- matrix(runif(24, 0, 100), nrow=6, byrow=TRUE)
 
 sim_df <- data.frame(mat)
 
-colnames(sim_df) <- c("states", "illiterates", "attending_school") # we only simulate a few columns, wlog
-sim_df$states <- c("Delhi", "Haryana", "Punjab", "Goa") # we only choose a few states and omit the total (India)
+colnames(sim_df) <- c("state", "att_sch", "decision_health", "infant_mortality_rate") 
+sim_df$state <- c("Delhi", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", 
+                  "Punjab", "Rajasthan") 
 
-ggplot(sim_df, aes(states, illiterates)) +
+ggplot(sim_df, aes(state, infant_mortality_rate)) +
   geom_point()
 
-# so from the simulated data, it looks like 86% of women and children in Haryana are illiterate, such as my partner 
-# and 45% of them attend school
+# In the simulation, we observe that Delhi has the highest infant mortality rate followed by 
+# Punjab and Himachal Pradesh.
