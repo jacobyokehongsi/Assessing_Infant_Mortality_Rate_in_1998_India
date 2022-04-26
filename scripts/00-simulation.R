@@ -2,6 +2,7 @@
 
 library(ggplot2)
 
+# simulate 6 rows of data for 4 different variables hence, a total of 6*4=24 data points required
 mat <- matrix(runif(24, 0, 100), nrow=6, byrow=TRUE)
 
 sim_df <- data.frame(mat)

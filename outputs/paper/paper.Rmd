@@ -5,7 +5,7 @@ author:
   - Jacob Yoke Hong Si
 thanks: "Code and data are available at: https://github.com/jacobyokehongsi/Assessing_Infant_Mortality_Rate_in_1998_India"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "What areas can be improved in order to promote the well-being of women and hence, reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian women and infant in different states of India. We found that the root cause of poor infant mortality rates stem from having poor living conditions that affects the likelihood of women to attain education and understand the importance of antenatal care. We also explore other factors such as inheritable traits (body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet"
+abstract: "What areas can be improved in order to promote the well-being of women and hence, reduce the infant mortality rate? Utilizing the data from the 1998-1999 India National Family Health Survey provided by the Demographic and Health Survey (DHS) program, we look to depict the demographics of Indian women and infant in different states of India. We have found that the root cause of poor infant mortality rates stems from having poor living conditions that affect the likelihood of women to attain education and understand the importance of antenatal care and birth delivery assistance. We also explore other factors such as inheritable traits (unhealthy body weight and anaemia disease) as well as an infant's diet. These factors are crucial in the development of an infant and the reduction of the infant mortality rate. \\par \\textbf{Keywords:} demographics, health, living conditions, infant mortality rate, education, antenatal care, body weight, anaemia, diet."
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -26,20 +26,20 @@ data <- read_csv(here::here("inputs/data/cleaned_data.csv")) %>%
 
 # Introduction
 
-The Demographic and Health Surveys (DHS) is a nationwide household survey that provides data for a myriad of evaluation indicators with respect to health, nutrition and population. A few examples of topics include education, mortality rate and health conditions. In addition to the topics mentioned, each survey also collects comprehensive socio-demographic data including the respondents' age, marital status, residential area, etc. 
+The Demographic and Health Surveys (DHS) is a nationwide household survey that provides data for a myriad of evaluation indicators with respect to health, nutrition, population and living standards. A few examples of topics include education, mortality rate and health conditions. In addition to the topics mentioned, each survey also collects comprehensive socio-demographic data including the respondents' age, marital status, residential area, etc. 
 
-The DHS program was established in 1984 and has provided technical assistance to over 300 demographic and health surveys in more than 90 countries with its main objective to enhance and develop data collection and utilization by host countries for monitoring and evaluating demographic indicators in order to devise high quality policy development decisions.
+The DHS program was established in 1984 and has provided technical assistance to over 300 demographic and health surveys in more than 90 countries. Its main objective is to enhance and develop data collection and utilization by host countries for monitoring and evaluating demographic indicators in order to devise high quality policy development decisions.
 
-In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system. (https://en.wikipedia.org/wiki/Demographic_and_Health_Surveys)
+In these regards, the DHS program has been majorly successful with the data collected often serving as crucial assistance to the government's policy making to help improve the well-being of the population. Furthermore, the program data is also accessible to health care providers, researchers and post-secondary institutions that have informed research with respect to the public health of the citizens. The program has thus been an invaluable source for quantitative and statistical methods to further understand the demographics of the population holistically. For these aforementioned reasons, the DHS program serves an important and fundamental role within a country's statistical system [@dhs].
 
-The National Family Health Survey (DHS program in India) on the state findings in India assesses key demographics of women and infant including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their infant. 
+The National Family Health Survey (NFHS-2: DHS program in India) on the state findings in India assesses key demographics of women and infant including their education, healthcare and living conditions. These factors are of utmost importance in the growth of a human being. Women that are highly educated tends to pay more attention to their own health leading to a happier and healthier lifestyle. Furthermore, these characteristics of a women would be passed down generations, affecting the health conditions of their infant. 
 
-The DHS on women and infant's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and infant population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
+The NFHS on women and infant's health aims to provide the International Institute for Population Sciences, which is the organization responsible for coordinating the health survey in India, information that includes demographics and trends. With the available data, it would assist the organization to help the Indian government design social policies that will best inform the Indian female and infant population on improving their living standards. Thus, the DHS is one of the key aspects of the foundation in informing Indian women to have a healthy and functional support system as well as ushering new generations of Indians into a prosperous world.
 
 In this paper, we will explore the background and characteristics of Indian women and infant using the data from the 1998-1999 India NFHS-2. Specifically, I will address the following research questions:
 
 - How do various living conditions such as electricity, water and sanitation facilities affect the ability of women to attend school?
-- How does education affect women's health and their attention to prenatal care?
+- How does education affect women's health and their attention to antenatal care?
 - What are the factors that affect infant mortality rate?
 
 The rest of the paper explores the following: Section 2 explores the origin of the data, methods used to obtain the data and its strengths and weaknesses. Section 3 explores the results and the relationships between the variables. Lastly, Section 4 discusses the results as well as potential solutions and policies that could be implemented to improve infant mortality rate.
@@ -47,7 +47,7 @@ The rest of the paper explores the following: Section 2 explores the origin of t
 # Data
 ## Data Source and Methodology
 
-The data was obtained from India’s second National Family Health Survey (NFHS-2) on women's and infant's health. The survey was conducted in 1998-1999 by the International Institute for Population Sciences (IIPS) by the Indian government using the NFHS questionnaire where households would be interviewed. The questionnaire was devised during workshops held in Mumbai where experts in population and health fields would partake in creating the questions. The target population was a sample of more than 90,000 ever-married women age 15–49 as well as infant born in the three years preceding the survey. The list of villages is used as a sampling frame and first stratified through several variables. Next, the participants were selected using systematic sampling with equal probability from a household list in each village area. The overall individual response rate was 96% with a total of 89,199 eligible women that are part of the 91,196 interviewed households. 
+The data was obtained from India’s second National Family Health Survey (NFHS-2) on women's and infant's health. The survey was conducted in 1998-1999 by the International Institute for Population Sciences (IIPS) using the NFHS questionnaire where households would be interviewed. The questionnaire was devised during workshops held in Mumbai where experts in population and health fields would partake in creating the questions. The target population was a sample of more than 90,000 ever-married women age 15–49 as well as infant born in the three years preceding the survey. The list of villages is used as a sampling frame and first stratified through several variables. Next, the participants were selected using systematic sampling with equal probability from a household list in each village area. The overall individual response rate was 96% with a total of 89,199 eligible women that are part of the 91,196 interviewed households. 
 
 The following is a brief outline of the questionnaire content on the 1998 India NFHS:
 
@@ -66,9 +66,9 @@ The following is a brief outline of the questionnaire content on the 1998 India 
 As mentioned in the previous section, participants of this survey were chosen via stratified sampling and systematic sampling. The survey frame that was created is as follows. The list of villages were first stratified by geographic location, then continuous regions and lastly further stratified using selected variables such as village size, female literacy and so on. Each state in India was stratified individually using these variables with a limit of 6 stratas for small states, 12 stratas for medium size states and 15 stratas for large states. From the list of stratified villages, they are then sampled systematically with probability proportional to the 1991 Census population of the village. The villages that have fewer than five households are not included in the sampling frame. Lastly, the individuals to be interviewed were selected with equal probability from the household list in each village area using systematic sampling.
 
 ## Key features
-The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity and toilets, infant mortality rate, mothers receiving antenatal care, vaccination status of infant, anaemia statuses (mothers and infant) and weight statuses (mothers and infant).
+The raw data of the state findings includes 70 variables which were obtained from the questionnaire responses. Key features part of the raw data include education standards, accessibility to electricity, drinking water and toilets, infant mortality rate, mothers receiving antenatal care, anaemia statuses (mothers and infant), weight statuses (mothers and infant) and the infant's diet.
 
-We used R [@citeR] and R packages tidyverse [@tidy] and pdftools [@pdftools] to extract, preprocess and analyze the data. When preprocessing the data, we also use R package pointblank [@pointblank] to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1, which was made using R package knitr [@knitr].
+We used R [@citeR] and R packages tidyverse [@tidy] and pdftools [@pdftools] to extract, preprocess and analyze the data. When preprocessing the data, we also used R package pointblank [@pointblank] to put together tests for class and content to ensure that the dataset passes. The key features analyzed in this paper is shown in table 1 and 2, which was made using R package knitr [@knitr].
 
 ```{r datafeatures, echo=FALSE, message=FALSE}
 data %>%
@@ -101,17 +101,16 @@ data %>%
 The primary strengths of this survey is the myriad of variables describing participants and households, as well as the large sample size where more than 99 percent of India's female population is surveyed. Additionally, all Indian states except for one is surveyed, covering the majority of India. The field data collected by interviewing teams were inputted into microcomputers to produce field-check tables, ensuring that errors are prevented when eliciting information and filling out questionnaires. The large amount of variables allows for thorough data exploration of the relationships between them while the ample amount of data allows concrete conclusions to be drawn. Furthermore, the sampling methodologies is explained in high detail as well as a comprehensive fact sheet put together to display key data from the survey.
 
 ### Weaknesses
-One of the drawbacks of the survey is that survey findings were obtained in all states but one, that is Tripura, due to the delay in fieldwork based on a local problem. Additionally, data is unable to be obtained from areas with union territories. Nonsampling errors are also present where surveyors were unable to locate and interview the correct household and the misunderstanding of the questionnaire by the interviewer or respondent. In addition, the collection of anaemia data was hindered since some female participants refused to partake in the anaemia testing and/or have their infant tested as well. These aforementioned weaknesses results in missing data thus, the inference we make could be less diverse.
-
-
-details of the methodology used by the DHS you used, and its key features, strengths, and weaknesses.
+One of the drawbacks of the survey is that survey findings were obtained in all states but one, that is Tripura, due to the delay in fieldwork based on a local problem. Additionally, data is unable to be obtained from areas with union territories. Nonsampling errors are also present where surveyors were unable to locate and interview the correct household and the misunderstanding of the questionnaire by the interviewer or respondent. In addition, the collection of anaemia data was hindered since some female participants refused to partake in the anaemia testing and/or have their infant tested as well. These aforementioned weaknesses results in missing data thus, the inference we will make could be less diverse.
 
 # Results
 The figures were made using R [@citeR], R package tidyverse [@tidy] and Lucidchart [@lucidchart]. The variables explored provides numeric values that varies between the states of India.
 
-```{r, echo=FALSE, fig.cap="Directed Acyclic Graph outlining the relationship between variables", out.width = '100%'}
+```{r dag, echo=FALSE, fig.cap="Directed Acyclic Graph outlining the relationship between variables", out.width = '100%'}
 include_graphics(here::here("inputs/data/sta304_diag.jpeg"))
 ```
+
+Figure \@ref(fig:dag) represents a directed acyclic graph that will outline the relationships between the variables explored in the paper. 
 
 ## Household conditions that affect females attending school
 
@@ -129,7 +128,7 @@ data %>%
 
 Figure \@ref(fig:attsch) depicts the distribution of females age 6-14 attending school (in percent) across the different states of India. Here, we observe that majority of females attending school, are from states including Kerala, Himachal Pradesh and Goa whereas majority of females not attending school are from Bihar, Rajasthan and Uttar Pradesh. In the states where the majority of females are not attending school, we can infer that these states tend to have a larger population, especially Uttar Pradesh.
 
-```{r elecsch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school and households with electricity (in percent)"}
+```{r elecsch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between households with electricity and females attending school (in percent)"}
 data %>% 
   ggplot(aes(x = electricity, y = att_school)) +
   geom_point() +
@@ -139,9 +138,9 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:elecsch) depicts the relationship between households with electricity and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with electricity increases, the percent of females age 6-14 attending school increases. This implies that households that can afford electricity tend to be more well-off and are able to send their infant to school.
+Figure \@ref(fig:elecsch) depicts the relationship between households with electricity and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with electricity increases, the percent of females age 6-14 attending school increases. This implies that households that can afford electricity tend to be more well-off and are able to send their children to school.
 
-```{r watersch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school and households with drinking water piped or from hand pump (in percent)"}
+```{r watersch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between households with drinking water piped or from hand pump and females attending school (in percent)"}
 data %>% 
   ggplot(aes(x = piped_pump_water, y = att_school)) +
   geom_point() +
@@ -151,7 +150,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r waterpop, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between population in millions and households with drinking water piped or from hand pump (in percent)"}
+```{r waterpop, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between households with drinking water piped or from hand pump and population in millions (in percent)"}
 data %>% 
   ggplot(aes(x = piped_pump_water, y = population)) +
   geom_point() +
@@ -161,7 +160,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-Figure \@ref(fig:watersch) depicts the relationship between households with drinking water piped or from hand pump and females age 6-14 attending school (in percent). Here, we observe that as the percent of households drinking water piped or from hand pump increases, the percent of females age 6-14 attending school decreases at a moderate level. If we were to also look at Figure \@ref(fig:waterpop), as the percent of households with drinking water piped or from hand pump increases, the population increases. Thus, this aligns with the fact that in Figure \@ref(fig:attsch), states with higher populations are also states where the majority of females are not attending school.
+Figure \@ref(fig:watersch) depicts the relationship between households with drinking water piped or from hand pump and females age 6-14 attending school (in percent). Here, we observe that as the percent of households drinking water piped or from hand pump increases, the percent of females age 6-14 attending school decreases at a moderate level which is odd. Therefore, we further analyze this strange trend by investingating the relationship between population and households with drinking water. Looking at Figure \@ref(fig:waterpop), as the percent of households with drinking water piped or from hand pump increases, the population increases. Thus, this aligns with the fact that in Figure \@ref(fig:attsch), states with higher populations are also states where the majority of females are not attending school.
 
 ```{r toiletsch, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school and households with no toilet/latrine facility (in percent)"}
 data %>% 
@@ -173,10 +172,10 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-Lastly, figure \@ref(fig:toiletsch) depicts the relationship between households with no toilet/latrine facility and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with no toilet/latrine facility increases, the percent of females age 6-14 attending school decreases This implies that households that have sanitation areas contributes to a better living environment leading to educated female individuals in the household.
+Lastly, figure \@ref(fig:toiletsch) depicts the relationship between households with no toilet/latrine facility and females age 6-14 attending school (in percent). Here, we observe that as the percent of households with no toilet/latrine facility increases, the percent of females age 6-14 attending school decreases. This implies that households that have sanitation areas contributes to a better living environment leading to educated female individuals in the household.
 
 ## Females attending school and Women involved in decisions regarding personal healthcare
-```{r schhealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between women involved in their own healthcare decisions and females attending school (in percent)"}
+```{r schhealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school and women involved in their own healthcare decisions (in percent)"}
 data %>% 
   ggplot(aes(x = att_school, y = healthcare_decisions)) +
   geom_point() +
@@ -190,7 +189,7 @@ Figure \@ref(fig:schhealth) depicts the relationship between females age 6-14 at
 
 
 ## Women involved in decisions regarding personal healthcare and mothers receiving at least one antenatal check-up
-```{r decante, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and females attending school (in percent)"}
+```{r decante, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between females attending school mothers receiving at least one antenatal check-up (in percent)"}
 data %>% 
   ggplot(aes(x = healthcare_decisions, y = antenatal)) +
   geom_point() +
@@ -207,7 +206,7 @@ Here, we explore how mothers that have antenatal check-up affect the antenatal c
 
 ### Antenatal Injections and Supplements
 
-```{r anteiron, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving iron and folic acid tablets or syrup and mothers receiving at least one antenatal check-up (in percent)"}
+```{r anteiron, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between folic acid tablets or syrup and mothers receiving at least one antenatal check-up and mothers receiving iron  (in percent)"}
 data %>% 
   ggplot(aes(x = antenatal, y = iron_folic)) +
   geom_point() +
@@ -217,7 +216,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r anteinject, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving two or more tetanus toxoid injections and mothers receiving at least one antenatal check-up (in percent)"}
+```{r anteinject, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and mothers receiving two or more tetanus toxoid injections  (in percent)"}
 data %>% 
   ggplot(aes(x = antenatal, y = injections)) +
   geom_point() +
@@ -230,7 +229,7 @@ data %>%
 Figures \@ref(fig:anteiron) and \@ref(fig:anteinject) depict the relationships between mothers receiving at least one antenatal check-up with mothers receiving iron and folic acid tablets or syrup as well as two or more tetanus toxoid injections (in percent) respectively. We observe that as the percent of mothers receiving at least one antenatal check-up increases, the percent of mothers receiving two or more tetanus toxoid injections as well as iron and folic acid tablets or syrup increases. This suggests that as mothers attend antenatal check-ups, doctors are likely to prescribe the mothers with tetanus toxoid injections as well as iron and folic acid supplements which boosts the health of the mother for a good birth delivery.
 
 ### Birth Delivery
-```{r antemed, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between deliveries in medical institutions and mothers receiving at least one antenatal check-up (in percent)"}
+```{r antemed, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and deliveries in medical institutions (in percent)"}
 data %>% 
   ggplot(aes(x = antenatal, y = deli_med_inst)) +
   geom_point() +
@@ -240,7 +239,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r antehealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between deliveries assisted by a health professional and mothers receiving at least one antenatal check-up (in percent)"}
+```{r antehealth, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving at least one antenatal check-up and deliveries assisted by a health professional (in percent)"}
 data %>% 
   ggplot(aes(x = antenatal, y = deli_health_pro)) +
   geom_point() +
@@ -272,7 +271,7 @@ Figure \@ref(fig:statemortal) depicts the distribution of infant mortality rate 
 ### Health Profile and Delivery Methods of Mothers prior to giving birth
 Here, we explore how different health profile factors and delivery methods affect the infant mortality rate for births in the three years preceding the survey.
 
-```{r ironmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and mothers receiving iron and folic acid tablets or syrup (in percent)"}
+```{r ironmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving iron and folic acid tablets or syrup and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = iron_folic, y = infant_mortality)) +
   geom_point() +
@@ -281,7 +280,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r injectmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and mothers receiving two or more tetanus toxoid injections (in percent)"}
+```{r injectmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between mothers receiving two or more tetanus toxoid injections and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = injections, y = infant_mortality)) +
   geom_point() +
@@ -292,7 +291,7 @@ data %>%
 
 Figures \@ref(fig:ironmortal) and \@ref(fig:injectmortal) depicts the relationship between mothers receiving iron and folic acid tablets or syrup, and two or more tetanus toxoid injections (in percent) with infant mortality rate respectively. Here, we observe that as the percent of mothers receiving iron and folic acid tablets or syrup and two or more tetanus toxoid injections increases, the infant mortality rate decreases. This suggests that mothers that pay more attention to their own health and maintain a healthy regimen will lead to a reduction in deaths of infants when they are born.
 
-```{r medmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and deliveries in medical institutions (in percent)"}
+```{r medmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between deliveries in medical institutions and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = deli_med_inst, y = infant_mortality)) +
   geom_point() +
@@ -301,7 +300,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r promortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and deliveries assisted by a health professional (in percent)"}
+```{r promortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between deliveries assisted by a health professional and infant mortality rate(in percent)"}
 data %>% 
   ggplot(aes(x = deli_health_pro, y = infant_mortality)) +
   geom_point() +
@@ -314,7 +313,7 @@ Figures \@ref(fig:medmortal) and \@ref(fig:promortal) depicts the relationship b
 
 ## infant that receive breastmilk and/or both breastmilk and solid food
 
-```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 0-3 months exclusively breastfed (in percent)"}
+```{r breastmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 0-3 months exclusively breastfed and infant mortality rate (in percent)"}
 data %>% 
   na.omit() %>% 
   ggplot(aes(x = breastfed, y = infant_mortality)) +
@@ -324,7 +323,7 @@ data %>%
   geom_smooth(method='lm')
 ```
 
-```{r breastfoodmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 6-9 months receiving breast milk and solid/mushy food (in percent)"}
+```{r breastfoodmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 6-9 months receiving breast milk and solid/mushy food  and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = child_milkfood, y = infant_mortality)) +
   geom_point() +
@@ -337,7 +336,7 @@ Figures \@ref(fig:breastmortal) and \@ref(fig:breastfoodmortal) portrays the rel
 
 ## Relationship between a women's body mass index (BMI), child's weight and infant mortality rate
 
-```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant under age three that are underweight and women with BMI below 18.5 kg/m (in percent)"}
+```{r bmiunder, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between women with BMI below 18.5 kg/m  and infant under age three that are underweight (in percent)"}
 data %>% 
   ggplot(aes(x = below_BMI, y = underweight)) +
   geom_point() +
@@ -348,7 +347,7 @@ data %>%
 
 Figure \@ref(fig:bmiunder) depicts the relationship between women with BMI below 18.5 kg/m and infant under age three years that are underweight (in percent). Here, we observe that as the percent of women with BMI below 18.5 kg/m increases, the percent of infant under age three years that are underweight increases. This implies that mothers that are skinny and malnutritioned would also lead to offsprings that are underweight.
 
-```{r undermortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant under age three years that are underweight (in percent)"}
+```{r undermortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant under age three years that are underweight and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = underweight, y = infant_mortality)) +
   geom_point() +
@@ -361,7 +360,7 @@ Figure \@ref(fig:undermortal) depicts the relationship between infant under age 
 
 ## Relationship between women with anaemia, infant with anaemia and infant mortality rate
 
-```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 6–35 months with any anaemia and women age 15–49 with any anaemia (in percent)"}
+```{r womenchildanaem, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between women age 15–49 with any anaemia and infant age 6–35 months with any anaemia (in percent)"}
 data %>% 
   ggplot(aes(x = women_anaemia, y = child_anaemia)) +
   geom_point() +
@@ -372,7 +371,7 @@ data %>%
 
 Figure \@ref(fig:womenchildanaem) depicts the relationship between women age 15-49 with any anaemia and infant age 6-35 months with any anaemia (in percent). Here, we observe that as the percent of women age 15-49 with any anaemia increases, the percent of infant age 6-35 months with any anaemia increases. This is coherent with the fact that since anaemia such as hemolytic anaemia can be inherited, mothers could pass on the anaemia to their offspring.
 
-```{r childmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant mortality rate and infant age 6–35 months with any anaemia (in percent)"}
+```{r childmortal, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.cap="Relationship between infant age 6–35 months with any anaemia and infant mortality rate (in percent)"}
 data %>% 
   ggplot(aes(x = child_anaemia, y = infant_mortality)) +
   geom_point() +
