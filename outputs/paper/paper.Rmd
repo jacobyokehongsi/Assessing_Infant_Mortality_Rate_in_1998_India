@@ -112,7 +112,7 @@ details of the methodology used by the DHS you used, and its key features, stren
 The figures were made using R (R Core Team 2020), R package tidyverse (Wickham et al. 2019) and Lucidchart (cite). The variables explored provides numeric values that varies between the states of India.
 
 ```{r, echo=FALSE, fig.cap="Supplementary Survey Questions", out.width = '100%'}
-knitr::include_graphics(here::here("inputs/data/sta304_diag.jpeg"))
+include_graphics(here::here("inputs/data/sta304_diag.jpeg"))
 ```
 
 ## Household conditions that affect females attending school
@@ -385,7 +385,7 @@ data %>%
 Figure \@ref(fig:childmortal) depicts the children age 6–35 months with any anaemia (in percent) and infant mortality rate. Here, we observe that as the percent of children age 6–35 months with any anaemia increases, the infant mortality rate increases. From this we can infer that children who have the anaemia disease would have symptoms that lead to critical health conditions and death.
 
 # Discussion
-The ultimate goal of the paper is to assist policy makers in implementing appropriate and efficient socio-economic policies to help promote the growth of children and reduce infant mortality rate in India. We will first discuss the root of the issue which is the household living environment, women's education and their healthcare decisions which lead them to attend antenatal check-ups. Then, we examine the numerous factors that is affected by conducting antenatal check-ups which include antenatal supplements and birth delivery methods. These factors are one of the few that directly impact the infant mortality rate. Additionally, we also look at the importance of infant's meals in their growth. Lastly, we examine inheritable traits such as anaemia and body weight that could be passed on from mother to child and how they impact the infant mortality rate.
+The ultimate goal of the paper is to assist policy makers in implementing appropriate and efficient socio-economic policies to help promote the growth of children and reduce infant mortality rate in India. We will first discuss the root of the issue which is the household living environment, women's education and their healthcare decisions which lead them to attend antenatal check-ups. Then, we examine the numerous factors that is affected by conducting antenatal check-ups which include antenatal supplements and birth delivery methods. These factors are one of the few that directly impact the infant mortality rate. Additionally, we also look at the importance of infant's meals in their growth. Lastly, we examine inheritable traits such as anaemia and body weight that could be passed on from mother to child and how they impact the infant mortality rate. The full data can be found in Appendix B.
 
 ## Household Living Environment, Women's Education and their Healthcare Decisions 
 The household living environment of individuals including access to electricity, clean water and sanitation facilities is crucial in providing a comfortable and productive living space. As observed previously, households with better living conditions will also lead to women who are able to attend school and be well educated. In our figures, we could infer that households in India with poorer living conditions also have fewer women attending school. Thus, emphasis should be put in developing the living conditions within households in India, especially states with poorer living conditions such as Bihar. In Bihar, only 18.2% of the households have access to electricity and 54.1% of females attending school. With such poor basic needs and living standards, there is no doubt that the women is unable to attend school. By developing the living conditions, it will in turn improve the well-being of the population and encourage women to attend school. Another proposal could also be to provide direct subsidies for students in hopes to attain a well educated population. 
@@ -398,9 +398,11 @@ Attending antenatal check-ups is key for protecting the health of women and thei
 ## Meals of infants and their effects on infant mortality rate
 The diet of an infant is one of the most important fundamentals in a child's health. An infant has to be well-fed in order to receive the nutrients and vitamins required for a healthy body. To recap, we observe that for children age 0-3 months, being exclusively breastfed does not have a significant impact on the infant mortality rate. On the other hand, for children age 6-9 months, it is important that they receive solid/mushy food to supplement the breast milk they are consuming. States such as Rajasthan with low percent of children age 6-9 months receiving breast milk and solid/mushy food (17.5%) also have high infant mortality rates (80.4%). As a child grows, the nutrients supplied by the breast milk is simply insufficient to develop a healthy immune system. Thus, it is vital that children are supplied with ample amount of nutritious solid foods on top of breast/formula milk to promote a healthy growth.
 
-## Body weight of mothers and children and their effect on infant mortality rate
+## Body weight and anaemia of mothers affecting children and the infant mortality rate
+Lastly, we will explore how inheritable traits that mothers possess such as body weight and diseases (anaemia) are inherited by their children and would be detrimental to their health. In our data exploration, women that have BMI below 18.5kg/m
 
-## Anaemia of mothers and children and their effect on infant mortality rate
+
+## Summary
 
 ## Weaknesses and next steps
 - combination of all these factors
@@ -550,9 +552,17 @@ The diet of an infant is one of the most important fundamentals in a child's hea
 	- The repository on Github can be cloned to extend/augment/build on/contribute to the dataset. Contributions will not be validated/verified since I am not responsible for any other dataset extensions. 
 8. *Any other comments?*
 	- N/A
-
+	
 \newpage
 
+# Full data tables
+```{r, echo=FALSE, fig.cap="Data Tables", out.width = '100%'}
+include_graphics(here::here("inputs/data/factsheet1.png"))
+include_graphics(here::here("inputs/data/factsheet2.png"))
+include_graphics(here::here("inputs/data/factsheet3.png"))
+```
+
+\newpage
 
 # References
 
