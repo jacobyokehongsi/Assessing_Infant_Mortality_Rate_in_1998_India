@@ -1,4 +1,4 @@
-# Assessing Infant Mortality Rate: Problem stemming from Household Living Conditions, Women's Education and Health
+# Assessing Infant Mortality Rate: Problems stemming from Household Living Conditions, Women's Education and Health
 
 ## Overview of Paper
 This repository looks at data collected by Demographic and Health Survey in 1998 India. This paper will provide a brief snapshot into the problem stemming from the high infant mortality rate in Indian states including Household Living Conditions, Women's Education and Health. This will help guide the Indian government as well as social services and corporations in designing policies and resources designed to best cater to the current needs of Indian women and children.
