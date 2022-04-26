@@ -75,7 +75,7 @@ data %>%
   select(state, att_school, electricity, infant_mortality) %>%
   slice(1:10) %>%
   kable(
-    caption = "Several Key Features (in percent) Analyzed in the Paper",
+    caption = "Several Key Features (in percent)",
     col.names = c("State", "Females Age 6-14 Attending School", "Households with Electricity", "Infant Mortality Rate"),
     digits = 1,
     booktabs = TRUE, 
@@ -88,7 +88,7 @@ data %>%
   select(state, antenatal, underweight, women_anaemia) %>%
   slice(1:10) %>%
   kable(
-    caption = "Several Key Features (in percent) Analyzed in the Paper Continued.",
+    caption = "Several Key Features (in percent) Continued.",
     col.names = c("State", "Mothers >= 1 antenatal check-up", "Underweight infant < Age 3", "Women with Anaemia"),
     digits = 1,
     booktabs = TRUE, 
@@ -106,7 +106,7 @@ One of the drawbacks of the survey is that survey findings were obtained in all 
 # Results
 The figures were made using R [@citeR], R package tidyverse [@tidy] and Lucidchart [@lucidchart]. The variables explored provides numeric values that varies between the states of India.
 
-```{r dag, echo=FALSE, fig.cap="Directed Acyclic Graph outlining the relationship between variables", out.width = '100%'}
+```{r dag, echo=FALSE, fig.cap="Interrelationships between variables part of Household Living Conditions, Women's Education and Health", out.width = '100%'}
 include_graphics(here::here("inputs/data/sta304_diag.jpeg"))
 ```
 
