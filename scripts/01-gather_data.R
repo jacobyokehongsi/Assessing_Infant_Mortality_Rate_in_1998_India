@@ -1,5 +1,10 @@
+# loading libraries
 library(pdftools)
 library(tidyverse)
+
+# In this R script, I extract the table data from the NFHS-2 report. I then 
+# select the desired tables I require and write them into a .csv format.
+
 
 pdf <- pdf_text("inputs/data/FRIND2.pdf")
 

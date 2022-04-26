@@ -2,6 +2,11 @@
 library(tidyverse)
 library(pointblank)
 
+# In this R script, I first read in the table data I extracted in "01-gather_data.R". 
+# I then cleaned and preprocess the data using tidy verse by separating the data
+# into its desirable columns. Lastly, I cleaned the data by removing NA variables
+# as well as stripping and white spaces before writing my cleaned data.
+
 # reading csv files
 table_tibble_1 = read_csv("inputs/data/raw_data1.csv")
 table_tibble_2 = read_csv("inputs/data/raw_data2.csv")
