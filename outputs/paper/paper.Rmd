@@ -1,5 +1,5 @@
 ---
-title: "Assessing Infant Mortality Rate: Problem stemming from Household Living Conditions, Women's Education and Health"
+title: "Assessing Infant Mortality Rate: Problems stemming from Household Living Conditions, Women's Education and Health"
 subtitle: "Trends in India from the 1998 Demographic Health Survey"
 author: 
   - Jacob Yoke Hong Si
