@@ -401,7 +401,7 @@ Lastly, we will explore how potentially inheritable traits that mothers possess,
 
 On the other hand, infants could also inherit anaemia diseases from their mother. Anaemia is a condition in which the body does not have sufficient healthy red blood cells to carry adequate oxygen around the body. Symptoms of anaemia include tiredness, shortness of breath, irregular heartbeats and more [@anaemia]. As infants are born with this disease, they are fatigued and sick leading to their poor health and death. In the northeast state of Assam, the percent of women age 15-49 with any anaemia is approximately 69.7% which also corresponds to the high anaemia rate of 63.2% in infants age 6-35 months. The percentage of infants with anaemia is relatively close to the percentage of women with anaemia. From this, we can infer that infants are most likely to have inherited this disease from their mother.
 
-Therefore, without a strong functional health system, the child would be weak and frail resulting in a higher rate of infant deaths.
+Therefore, without a strong functional health system, the child would be weak and frail resulting in a higher rate of infant deaths. To solve these issues, it is important that mothers attend antenatal check-ups where doctors could discover these health conditions and prescribe them with the appropriate treatments.
 
 ## Weaknesses and next steps
 
